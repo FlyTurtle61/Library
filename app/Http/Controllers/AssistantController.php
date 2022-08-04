@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Writer;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,8 +18,8 @@ class AssistantController extends Controller
     }
     public function books(){
         $data1["books"] = Book::all();
-        $data["title"] = "Kitaplar";
-        $data["page_title"] = "Kitaplar";
+        $data["title"] = "Kitap Ekle";
+        $data["page_title"] = "Kitap Ekle";
         $data["content"] = view("users.assistant.books.books", $data1);
         return view("users.assistant.main", $data);
     }
@@ -47,8 +48,8 @@ class AssistantController extends Controller
     }
     public function getBook($id){
         $data1["book"]=Book::find($id);
-        $data["title"]="Kitap Bilgileri";
-        $data["page_title"]="Kitap Düzenleme İşlemi";
+        $data["title"]="Kitap Düzenle";
+        $data["page_title"]="Kitap Düzenle";
         $data["content"]=view("users.assistant.books.book",$data1);
         return view("users.assistant.main",$data);
     }
@@ -77,14 +78,86 @@ class AssistantController extends Controller
         $book->save();
         return redirect()->route("assistant.book",$request->book_id);
        }
-
-
-
-
-       public function deleteBook($id){
+    public function deleteBook($id){
             Book::where("id",$id)->delete();
             return redirect()->route("assistant.books");
        }
 
+    public function writers(){
+        $data1["books"] = Book::all();
+        $data["title"] = "Yazar Ekle";
+        $data["page_title"] = "Yazar Ekle";
+        $data["content"] = view("users.assistant.writers.writers", $data1);
+        return view("users.assistant.main", $data);
+    }
+    public function addWriter(Request $request){
 
-}
+        $error_message = [
+            "required" => ":attribute alanı boş geçmeyiniz.",
+            "unique" => "Aynı :attribute kitap ismi ile birden fazla kayıt oluşturulamaz!!",
+
+        ];
+
+        Validator::make($request->all(), [
+            "writer_name" => "required","unique:books",
+            "writer_birthyear" => "required",
+
+        ], $error_message)->validate();
+        $writer = new Writer();
+        $writer->writer_name=$request->writer_name;
+        $writer->writer_birthyear=$request->writer_birthyear;
+        $writer->save();
+        return redirect()->route("assistant.writers");
+    }
+    public function getWriter($id){
+        $data1["writer"]=Writer::find($id);
+        $data["title"]="Yazar Düzenle";
+        $data["page_title"]="Yazar Düzenle";
+        $data["content"]=view("users.assistant.writers.writer",$data1);
+        return view("users.assistant.main",$data);
+    }
+    public function updateWriter(Request $request){
+        $mesaj = [
+            "required" => ":attribute zorunlu alandır.",
+            "min"=>":attribute alanında eksik değer",
+            "max"=>":attribute alanında fazla değer",
+            "integer"=>":attribute alanına sayısal değer girilmeli"
+        ];
+
+        Validator::make($request->all(), [
+
+            "writer_name" =>["required","min:1","max:20"],
+            "writer_birthyear" =>["required","min:1","max:5","integer"],
+        ], $mesaj)->validate();
+
+        $writer=Writer::find($request->writer_id);
+        $writer->writer_name=$request->writer_name;
+        $writer->writer_birthyear=$request->writer_birthyear;
+        $writer->save();
+        return redirect()->route("assistant.writer",$request->writer_id);
+       }
+       public function deleteWriter($id){
+            Writer::where("id",$id)->delete();
+            return redirect()->route("assistant.writers");
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }

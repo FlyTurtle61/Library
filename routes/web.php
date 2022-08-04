@@ -33,14 +33,18 @@ Route::group(["prefix" => "admin", "middleware" => ["auth", "verified", "can:isA
 
 Route::group(["prefix" => "assistant", "middleware" => ["auth", "verified", "can:isAssistant"]], function () {
     Route::get("main",[AssistantController::class,"index"])->name("assistant.main");
+
     Route::get("books",[AssistantController::class,"books"])->name("assistant.books");
     Route::post("books",[AssistantController::class,"addBook"])->name("assistant.addBook");
     Route::get("book/{id}",[AssistantController::class,"getBook"])->name("assistant.book");
     Route::post("book",[AssistantController::class,"updateBook"])->name("assistant.updateBook");
     Route::delete("book/{id}",[AssistantController::class,"deleteBook"])->name("assistant.deleteBook");
 
-    
-
+    Route::get("writers",[AssistantController::class,"writers"])->name("assistant.writers");
+    Route::post("writers",[AssistantController::class,"addWriter"])->name("assistant.addWriter");
+    Route::get("writer/{id}",[AssistantController::class,"getWriter"])->name("assistant.getWriter");
+    Route::post("writer",[AssistantController::class,"updateWriter"])->name("assistant.updateWriter");
+    Route::delete("writer/{id}",[AssistantController::class,"deleteWriter"])->name("assistant.deleteWriter");
 
 
 

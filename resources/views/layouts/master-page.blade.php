@@ -18,6 +18,22 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f0966;			/*Büyük scrool bence buna radius vermiyelim çünkü güzel bir görüntü olmuor boşluk kalıyor */
+}
+
+::-webkit-scrollbar-thumb {			/* scrool un içindeki küçük scrool yükseklik ayarıylada oynayabiliriz belki */
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(0, 179, 255);
+}
+    </style>
 </head>
 
 <body>

@@ -26,14 +26,17 @@
                     <span>Asistan İşlemleri</span>
                 </a>
                 <ul class="submenu ">
-                    <li class="submenu-item ">
+                    <li class="submenu-item">
                         <a href="{{ route('assistant.books') }}">Kitap Ekle</a>
                     </li>
-                    <li class="submenu-item ">
-                        <a href="component-spinner.html">Kitap Listele</a>
+                    <li class="submenu-item">
+                        <a href="{{ route('assistant.writers') }}">Kitap Listele</a>
                     </li>
-                    <li class="submenu-item ">
-                        <a href="component-tooltip.html">Kitap Oyla</a>
+                    <li class="submenu-item">
+                        <a href="{{ route('assistant.writers') }}">Yazar Ekle</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ route('assistant.writers') }}">Yazar Listele</a>
                     </li>
                 </ul>
             </li>

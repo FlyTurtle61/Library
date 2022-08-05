@@ -38,7 +38,7 @@ class AdminController extends Controller
             "address" => "required",
             "email" => ["required", "unique:users", "email"]
         ], $error_message)->validate();
-        
+
         $user = new User();
         $user->first_name=$request->first_name;
         $user->last_name=$request->last_name;

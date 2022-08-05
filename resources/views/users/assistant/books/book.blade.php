@@ -12,6 +12,22 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
+                                            <label for="writer-adi-icon">Kitap ID
+                                                @error("id")
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                            </label>
+                                            <div class="position-relative">
+                                                <input type="text" name="id" value="{{ $book->id }}"
+                                                    class="form-control" placeholder="Kitap ID giriniz" id="book-id-icon">
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group has-icon-left">
                                             <label for="book-name-icon">Kitap Adı
                                                 @error("book_name")
                                                     <strong class="text-danger">{{ $message }}</strong>

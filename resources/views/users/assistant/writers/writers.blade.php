@@ -12,6 +12,7 @@
                         <tr>
                             <th style="user-select: none;">Yazar Adı</th>
                             <th style="user-select: none;">Doğum Yılı</th>
+                            <th style="user-select: none;">Mail</th>
                             <th style="user-select: none;">Yazar ID</th>
                             <th style="user-select: none;">Düzenle</th>
                         </tr>
@@ -21,6 +22,7 @@
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->writer_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->writer_birthyear }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->email }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
                                 <td>
                                     <a href="{{ route('assistant.writer', $val->id) }}"
@@ -58,6 +60,15 @@
                         </label>
                         <input class="form-control" name="writer_name" placeholder="Yazarın adı giriniz"
                             value="{{ old('writer_name') }}" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yazarın E-maili
+                            @error('email')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </label>
+                        <input class="form-control" type="mail" name="email" placeholder="Yazarın e-maili giriniz"
+                            value="{{ old('email') }}" />
                     </div>
                     <div class="form-group">
                         <label>Yazarın Doğum Yılı

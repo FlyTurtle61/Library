@@ -62,7 +62,7 @@ class AssistantController extends Controller
         ];
 
         Validator::make($request->all(), [
-
+            "id"=>["required","min:1","max:9999999999999","integer"],
             "book_name" =>["required","min:1","max:20"],
             "kitap_turu" =>["required","min:1","max:20"],
             "yazar_adi" =>["required","min:5","max:50"],
@@ -70,13 +70,14 @@ class AssistantController extends Controller
         ], $mesaj)->validate();
 
         $book=Book::find($request->book_id);
+        $book->id=$request->id;
         $book->book_name=$request->book_name;
         $book->kitap_turu=$request->kitap_turu;
         $book->yazar_adi=$request->yazar_adi;
         $book->basim_yili=$request->basim_yili;
 
         $book->save();
-        return redirect()->route("assistant.book",$request->book_id);
+        return redirect()->route("assistant.books",$request->book_id);
        }
     public function deleteBook($id){
             Book::where("id",$id)->delete();
@@ -99,11 +100,13 @@ class AssistantController extends Controller
 
         Validator::make($request->all(), [
             "writer_name" => "required","unique:books",
+            "email" =>"required","unique:writers",
             "writer_birthyear" => "required","integer",
 
         ], $error_message)->validate();
         $writer = new Writer();
         $writer->writer_name=$request->writer_name;
+        $writer->email=$request->email;
         $writer->writer_birthyear=$request->writer_birthyear;
         $writer->save();
         return redirect()->route("assistant.writers");
@@ -120,21 +123,24 @@ class AssistantController extends Controller
             "required" => ":attribute zorunlu alandır.",
             "min"=>":attribute alanında eksik değer",
             "max"=>":attribute alanında fazla değer",
+            "unique" => "Aynı :attribute email  ile birden fazla kayıt oluşturulamaz!!",
             "integer"=>":attribute alanına sayısal değer girilmeli"
         ];
 
         Validator::make($request->all(), [
             "writer_name" =>["required","min:1","max:25"],
             "writer_birthyear" =>["required","min:1","max:2999","integer"],
+            "email"=>["required","unique:writers"],
             "id"=>["required","min:1","max:9999999999999"],
         ], $mesaj)->validate();
 
         $writer=Writer::find($request->writer_id);
         $writer->writer_name=$request->writer_name;
+        $writer->email=$request->email;
         $writer->writer_birthyear=$request->writer_birthyear;
         $writer->id=$request->id;
         $writer->save();
-        return redirect()->route("assistant.writer",$request->id);
+        return redirect()->route("assistant.writers",$request->id);
        }
        public function deleteWriter($id){
             Writer::where("id",$id)->delete();

@@ -9,6 +9,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th style="user-select: none;">Kitap ID</th>
                             <th style="user-select: none;">Kitap Adı</th>
                             <th style="user-select: none;">Yazar Adı</th>
                             <th style="user-select: none;">Kitap Türü</th>
@@ -19,6 +20,7 @@
                     <tbody>
                         @foreach ($books as $val)
                             <tr>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->book_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->yazar_adi }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->kitap_turu }}</td>
@@ -49,7 +51,6 @@
             <div class="modal-body">
                 <form id="addBookForm" method="post" action="{{ route('assistant.addBook') }}">
                     @csrf
-
                     <div class="form-group">
                         <label>Kitabın Adı
                             @error('book_name')

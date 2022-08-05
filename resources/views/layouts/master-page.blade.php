@@ -25,13 +25,13 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #0f0966;			/*Büyük scrool bence buna radius vermiyelim çünkü güzel bir görüntü olmuor boşluk kalıyor */
+    background-color: #e5e5e5;			/*Büyük scrool bence buna radius vermiyelim çünkü güzel bir görüntü olmuor boşluk kalıyor */
 }
 
 ::-webkit-scrollbar-thumb {			/* scrool un içindeki küçük scrool yükseklik ayarıylada oynayabiliriz belki */
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(12, 144, 201, 0.793);
+    background: rgb(0, 221, 255);
 }
     </style>
 </head>

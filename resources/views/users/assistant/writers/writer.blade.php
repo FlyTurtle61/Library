@@ -29,6 +29,23 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
+                                            <label for="writer-name-icon">Yazar E-maili
+                                                @error("email")
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                            </label>
+                                            <div class="position-relative">
+                                                <input name="email" type="email" value="{{ $writer->email }}"
+                                                    class="form-control" placeholder="Yazar emaili giriniz"
+                                                    id="writer-name-icon">
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-person"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group has-icon-left">
                                             <label for="writer-name-icon">Yazar Doğum Yılı
                                                 @error("writer_birthyear")
                                                     <strong class="text-danger">{{ $message }}</strong>

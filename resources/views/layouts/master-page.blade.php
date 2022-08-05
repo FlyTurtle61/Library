@@ -31,7 +31,7 @@
 ::-webkit-scrollbar-thumb {			/* scrool un içindeki küçük scrool yükseklik ayarıylada oynayabiliriz belki */
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgb(0, 179, 255);
+    background: rgba(12, 144, 201, 0.793);
 }
     </style>
 </head>

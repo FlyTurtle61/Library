@@ -11,7 +11,8 @@
                     <thead>
                         <tr>
                             <th style="user-select: none;">Yazar Adı</th>
-                            <th style="user-select: none;">Yaşı</th>
+                            <th style="user-select: none;">Doğum Yılı</th>
+                            <th style="user-select: none;">Yazar ID</th>
                             <th style="user-select: none;">Düzenle</th>
                         </tr>
                     </thead>
@@ -20,6 +21,7 @@
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->writer_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->writer_birthyear }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
                                 <td>
                                     <a href="{{ route('assistant.writer', $val->id) }}"
                                         class="btn btn-primary">Göster</a>
@@ -35,7 +37,7 @@
 </div>
 </div>
 
-<div class="modal" id="addWriterkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+<div class="modal" id="addWriterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -58,7 +60,7 @@
                             value="{{ old('writer_name') }}" />
                     </div>
                     <div class="form-group">
-                        <label>Yazarın Yaşı
+                        <label>Yazarın Doğum Yılı
                             @error('writer_birthyear')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
@@ -66,6 +68,7 @@
                         <input class="form-control" name="writer_birthyear" placeholder="Yazarın doğum yılını giriniz"
                             value="{{ old('writer_birthyear') }}" />
                     </div>
+
                 </form>
             </div>
             <div class="modal-footer">

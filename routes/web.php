@@ -42,7 +42,7 @@ Route::group(["prefix" => "assistant", "middleware" => ["auth", "verified", "can
 
     Route::get("writers",[AssistantController::class,"writers"])->name("assistant.writers");
     Route::post("writers",[AssistantController::class,"addWriter"])->name("assistant.addWriter");
-    Route::get("writer/{id}",[AssistantController::class,"getWriter"])->name("assistant.getWriter");
+    Route::get("writer/{id}",[AssistantController::class,"getWriter"])->name("assistant.writer");
     Route::post("writer",[AssistantController::class,"updateWriter"])->name("assistant.updateWriter");
     Route::delete("writer/{id}",[AssistantController::class,"deleteWriter"])->name("assistant.deleteWriter");
 

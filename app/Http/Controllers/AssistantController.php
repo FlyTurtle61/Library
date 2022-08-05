@@ -84,7 +84,7 @@ class AssistantController extends Controller
        }
 
     public function writers(){
-        $data1["books"] = Book::all();
+        $data1["writers"] = Writer::all();
         $data["title"] = "Yazar Ekle";
         $data["page_title"] = "Yazar Ekle";
         $data["content"] = view("users.assistant.writers.writers", $data1);
@@ -95,12 +95,11 @@ class AssistantController extends Controller
         $error_message = [
             "required" => ":attribute alanı boş geçmeyiniz.",
             "unique" => "Aynı :attribute kitap ismi ile birden fazla kayıt oluşturulamaz!!",
-
         ];
 
         Validator::make($request->all(), [
             "writer_name" => "required","unique:books",
-            "writer_birthyear" => "required",
+            "writer_birthyear" => "required","integer",
 
         ], $error_message)->validate();
         $writer = new Writer();
@@ -125,16 +124,17 @@ class AssistantController extends Controller
         ];
 
         Validator::make($request->all(), [
-
-            "writer_name" =>["required","min:1","max:20"],
-            "writer_birthyear" =>["required","min:1","max:5","integer"],
+            "writer_name" =>["required","min:1","max:25"],
+            "writer_birthyear" =>["required","min:1","max:2999","integer"],
+            "id"=>["required","min:1","max:9999999999999"],
         ], $mesaj)->validate();
 
         $writer=Writer::find($request->writer_id);
         $writer->writer_name=$request->writer_name;
         $writer->writer_birthyear=$request->writer_birthyear;
+        $writer->id=$request->id;
         $writer->save();
-        return redirect()->route("assistant.writer",$request->writer_id);
+        return redirect()->route("assistant.writer",$request->id);
        }
        public function deleteWriter($id){
             Writer::where("id",$id)->delete();

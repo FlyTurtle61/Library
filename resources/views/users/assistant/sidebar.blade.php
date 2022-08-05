@@ -30,13 +30,13 @@
                         <a href="{{ route('assistant.books') }}">Kitap Ekle</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.writers') }}">Kitap Listele</a>
+                        <a href="">Kitap Listele</a>
                     </li>
                     <li class="submenu-item">
                         <a href="{{ route('assistant.writers') }}">Yazar Ekle</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.writers') }}">Yazar Listele</a>
+                        <a href="">Yazar Listele</a>
                     </li>
                 </ul>
             </li>

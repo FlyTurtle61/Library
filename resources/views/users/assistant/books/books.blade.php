@@ -75,12 +75,12 @@
                               <option value="Aksiyon">Aksiyon</option>
                               <option value="Polisiye">Polisiye</option>
                               <option value="Korku">Korku</option>
+                              <option value="Korku">Korku</option>
                               <option value="Fantastik">Fantastik</option>
                               <option value="Bilim Kurgu">Bilim Kurgu</option>
                             </select>
                           </div>
                     </div>
-
                     <div class="form-group">
                         <label>Yazarın Adı
                             @error('yazar_adi')

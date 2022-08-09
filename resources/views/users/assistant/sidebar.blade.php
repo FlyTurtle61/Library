@@ -38,6 +38,12 @@
                     <li class="submenu-item">
                         <a href="">Yazar Listele</a>
                     </li>
+                    <li class="submenu-item">
+                        <a href="{{ route('assistant.categories') }}">Kategori Ekle</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="">Kategori Listele</a>
+                    </li>
                 </ul>
             </li>
 

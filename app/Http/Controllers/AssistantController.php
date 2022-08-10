@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Writer;
 use App\Models\Category;
+use App\Models\Publisher;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
@@ -36,16 +37,18 @@ class AssistantController extends Controller
 
         Validator::make($request->all(), [
             "book_name" => "required", "unique:books",
-            "yazar_adi" => "required",
-            "basim_yili" => "required",
-            "kitap_turu" => "required",
+            "book_img" => "required",
+            "publication_year" => "required",
+            "page_number" => "required",
+            "volume_number" => "required",
 
         ], $error_message)->validate();
         $book = new Book();
         $book->book_name = $request->book_name;
-        $book->yazar_adi = $request->yazar_adi;
-        $book->kitap_turu = $request->kitap_turu;
-        $book->basim_yili = $request->basim_yili;
+        $book->book_img = $request->book_img;
+        $book->publication_year = $request->publication_year;
+        $book->page_number = $request->page_number;
+        $book->volume_number = $request->volume_number;
         $book->save();
         return redirect()->route("assistant.books");
     }
@@ -67,18 +70,19 @@ class AssistantController extends Controller
         Validator::make($request->all(), [
             "id" => ["required", "min:1", "max:9999999999999", "integer"],
             "book_name" => ["required", "min:1", "max:20"],
-            "kitap_turu" => ["required", "min:1", "max:20"],
-            "yazar_adi" => ["required", "min:5", "max:50"],
-            "basim_yili" => ["required", "integer", "min:1200", "max:2100"],
+            "book_img" => ["required"],
+            "publication_year" => ["required", "min:1", "max:4"],
+            "page_number" => ["required"],
+            "volume_number" => ["required"],
         ], $mesaj)->validate();
 
         $book = Book::find($request->book_id);
         $book->id = $request->id;
         $book->book_name = $request->book_name;
-        $book->kitap_turu = $request->kitap_turu;
-        $book->yazar_adi = $request->yazar_adi;
-        $book->basim_yili = $request->basim_yili;
-
+        $book->book_img = $request->book_img;
+        $book->publication_year = $request->publication_year;
+        $book->page_number = $request->page_number;
+        $book->volume_number = $request->volume_number;
         $book->save();
         return redirect()->route("assistant.books", $request->book_id);
     }
@@ -102,15 +106,19 @@ class AssistantController extends Controller
         ];
 
         Validator::make($request->all(), [
-            "writer_name" => "required", "unique:books",
+            "writer_name" => "required", "unique:writers",
             "email" => "required", "unique:writers",
-            "writer_birthyear" => "required", "integer",
+            "birth_year" => "required", "integer",
+            "writer_img" => "required",
+            "phone" => "required", "unique:writers",
 
         ], $error_message)->validate();
         $writer = new Writer();
         $writer->writer_name = $request->writer_name;
+        $writer->writer_img = $request->writer_img;
+        $writer->phone = $request->phone;
         $writer->email = $request->email;
-        $writer->writer_birthyear = $request->writer_birthyear;
+        $writer->birth_year = $request->birth_year;
         $writer->save();
         return redirect()->route("assistant.writers");
     }
@@ -134,15 +142,19 @@ class AssistantController extends Controller
 
         Validator::make($request->all(), [
             "writer_name" => ["required", "min:1", "max:25"],
-            "writer_birthyear" => ["required", "min:1", "max:2999", "integer"],
-            "email" => ["required", "unique:writers"],
+            "writer_img" => ["required"],
+            "birth_year" => ["required", "min:1", "max:2999", "integer"],
+            "phone" => ["required", "min:1", "max:11"],
+            "email" => ["required"],
             "id" => ["required", "min:1", "max:9999999999999"],
         ], $mesaj)->validate();
 
         $writer = Writer::find($request->writer_id);
         $writer->writer_name = $request->writer_name;
+        $writer->writer_img = $request->writer_img;
+        $writer->phone = $request->phone;
         $writer->email = $request->email;
-        $writer->writer_birthyear = $request->writer_birthyear;
+        $writer->birth_year = $request->birth_year;
         $writer->id = $request->id;
         $writer->save();
         return redirect()->route("assistant.writers", $request->id);
@@ -153,7 +165,6 @@ class AssistantController extends Controller
         Writer::where("id", $id)->delete();
         return redirect()->route("assistant.writers");
     }
-
     public function categories(){
         $data1["categories"] = Category::all();
         $data["title"] = "Kategori Ekle";
@@ -169,13 +180,13 @@ class AssistantController extends Controller
         ];
 
         Validator::make($request->all(), [
-            "name" => "required",
-            "image" => "required",
+            "category_name" => "required",
+            "category_img" => "required",
 
         ], $error_message)->validate();
         $category = new Category();
-        $category->name = $request->name;
-        $category->image = $request->image;
+        $category->category_name = $request->category_name;
+        $category->category_img = $request->category_img;
         $category->save();
         return redirect()->route("assistant.categories");
     }
@@ -198,14 +209,14 @@ class AssistantController extends Controller
         ];
 
         Validator::make($request->all(), [
-            "name" => ["required", "min:1", "max:25"],
-            "image" => ["required"],
+            "category_name" => ["required", "min:1", "max:25"],
+            "category_img" => ["required"],
             "id" => ["required","integer"],
         ], $mesaj)->validate();
 
         $category = Category::find($request->category_id);
-        $category->image = $request->image;
-        $category->name = $request->name;
+        $category->category_name = $request->category_name;
+        $category->category_img = $request->category_img;
         $category->id = $request->id;
         $category->save();
         return redirect()->route("assistant.categories", $request->id);
@@ -215,6 +226,81 @@ class AssistantController extends Controller
     {
         Category::where("id", $id)->delete();
         return redirect()->route("assistant.categories");
+    }
+
+    public function publishers(){
+        $data1["publishers"] = Publisher::all();
+        $data["title"] = "Yayınevi Ekle";
+        $data["page_title"] = "Yayınevi Ekle";
+        $data["content"] = view("users.assistant.publishers.publishers", $data1);
+        return view("users.assistant.main", $data);
+    }
+    public function addPublisher(Request $request){
+
+        $error_message = [
+            "required" => ":attribute alanı boş geçmeyiniz.",
+            "unique" => "Aynı :attribute kitap ismi ile birden fazla kayıt oluşturulamaz!!",
+        ];
+
+        Validator::make($request->all(), [
+            "publisher_name" => "required",
+            "publisher_img" => "required",
+            "address" => "required",
+            "phone" => "required",
+            "email" => "required",
+
+        ], $error_message)->validate();
+        $publisher = new Publisher();
+        $publisher->publisher_name = $request->publisher_name;
+        $publisher->publisher_img = $request->publisher_img;
+        $publisher->phone = $request->phone;
+        $publisher->address = $request->address;
+        $publisher->email = $request->email;
+        $publisher->save();
+        return redirect()->route("assistant.publishers");
+    }
+    public function getPublisher($id)
+    {
+        $data1["category"] = Publisher::find($id);
+        $data["title"] = "Kategori Düzenle";
+        $data["page_title"] = "Kategori Düzenle";
+        $data["content"] = view("users.assistant.publishers.publisher", $data1);
+        return view("users.assistant.main", $data);
+    }
+    public function updatePublisher(Request $request)
+    {
+        $mesaj = [
+            "required" => ":attribute zorunlu alandır.",
+            "min" => ":attribute alanında eksik değer",
+            "max" => ":attribute alanında fazla değer",
+            "unique" => "Aynı :attribute email  ile birden fazla kayıt oluşturulamaz!!",
+            "integer" => ":attribute alanına sayısal değer girilmeli"
+        ];
+
+        Validator::make($request->all(), [
+            "publisher_name" => ["required", "min:1", "max:25"],
+            "publisher_img" => ["required"],
+            "address" => ["required"],
+            "phone" => ["required"],
+            "email" => ["required"],
+            "id" => ["required","integer"],
+        ], $mesaj)->validate();
+
+        $publisher = Publisher::find($request->category_id);
+        $publisher->publisher_name = $request->publisher_name;
+        $publisher->publisher_img = $request->publisher_img;
+        $publisher->phone = $request->phone;
+        $publisher->address = $request->address;
+        $publisher->email = $request->email;
+        $publisher->id = $request->id;
+        $publisher->save();
+        return redirect()->route("assistant.publishers", $request->id);
+    }
+
+    public function deletePublisher($id)
+    {
+        Publisher::where("id", $id)->delete();
+        return redirect()->route("assistant.publishers");
     }
 }
 

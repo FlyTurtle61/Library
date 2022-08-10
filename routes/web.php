@@ -53,6 +53,12 @@ Route::group(["prefix" => "assistant", "middleware" => ["auth", "verified", "can
     Route::get("category/{id}", [AssistantController::class, "getCategory"])->name("assistant.category");
     Route::post("category", [AssistantController::class, "updateCategory"])->name("assistant.updateCategory");
     Route::delete("category/{id}", [AssistantController::class, "deleteCategory"])->name("assistant.deleteCategory");
+
+    Route::get("publishers",[AssistantController::class,"publishers"])->name("assistant.publishers");
+    Route::post("publishers", [AssistantController::class, "addPublisher"])->name("assistant.addPublisher");
+    Route::get("publisher/{id}", [AssistantController::class, "getPublisher"])->name("assistant.publisher");
+    Route::post("publisher", [AssistantController::class, "updatePublisher"])->name("assistant.updatePublisher");
+    Route::delete("publisher/{id}", [AssistantController::class, "deletePublisher"])->name("assistant.deletePublisher");
 });
 
 

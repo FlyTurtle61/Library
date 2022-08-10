@@ -10,10 +10,11 @@
                     <thead>
                         <tr>
                             <th style="user-select: none;">Kitap ID</th>
+                            <th style="user-select: none;">Kitap Resmi</th>
                             <th style="user-select: none;">Kitap Adı</th>
-                            <th style="user-select: none;">Yazar Adı</th>
-                            <th style="user-select: none;">Kitap Türü</th>
                             <th style="user-select: none;">Basım Yılı</th>
+                            <th style="user-select: none;">Sayfa Sayısı</th>
+                            <th style="user-select: none;">Cilt Sayısı</th>
                             <th style="user-select: none;">Düzenle</th>
                         </tr>
                     </thead>
@@ -21,10 +22,11 @@
                         @foreach ($books as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->book_img}}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->book_name }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->yazar_adi }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->kitap_turu }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->basim_yili }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->publication_year }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->page_number }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->volume_number }}</td>
                                 <td>
                                     <a href="{{ route('assistant.book', $val->id) }}" class="btn btn-primary">Göster</a>
                                 </td>
@@ -52,6 +54,15 @@
                 <form id="addBookForm" method="post" action="{{ route('assistant.addBook') }}">
                     @csrf
                     <div class="form-group">
+                        <label>Kitabın Resmi
+                            @error('book_img')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </label>
+                        <input type="file" class="form-control" name="book_img" placeholder="Kitap resmi yükleyiniz"
+                            value="{{ old('book_img') }}" />
+                    </div>
+                    <div class="form-group">
                         <label>Kitabın Adı
                             @error('book_name')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -60,7 +71,7 @@
                         <input class="form-control" name="book_name" placeholder="Kitap adı giriniz"
                             value="{{ old('book_name') }}" />
                     </div>
-                    <div class="form-group">
+{{--                     <div class="form-group">
                         <label>Kitabın Türü
                             @error('kitap_turu')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -80,23 +91,33 @@
                               <option value="Bilim Kurgu">Bilim Kurgu</option>
                             </select>
                           </div>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
-                        <label>Yazarın Adı
-                            @error('yazar_adi')
+                        <label>Kitabın Basım Yılı
+                            @error('publication_year')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" name="yazar_adi" placeholder="Yazarın adını giriniz"
-                            value="{{ old('yazar_adi') }}" />
+                        <input class="form-control" name="publication_year" placeholder="Kitap basım yılını giriniz"
+                            value="{{ old('publication_year') }}" />
                     </div>
                     <div class="form-group">
-                        <label>Basım Yılı
-                            @error('basim_yili')
+                        <label>Kitabın Cilt Sayısı
+                            @error('volume_number')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" name="basim_yili" type="number" min="1900" max="2099" step="1" placeholder="Basım yılını giriniz" value="{{ old('basim_yili') }}" />
+                        <input class="form-control" name="volume_number" placeholder="Kitap cilt numarasını giriniz"
+                            value="{{ old('volume_number') }}" />
+                    </div>
+                    <div class="form-group">
+                        <label>Kitabın Sayfa Sayısı
+                            @error('page_number')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </label>
+                        <input class="form-control" name="page_number" placeholder="Kitabın sayfa sayısını giriniz"
+                            value="{{ old('page_number') }}" />
                     </div>
                         </form>
             </div>

@@ -10,26 +10,26 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th style="user-select: none;">Yazar ID</th>
-                            <th style="user-select: none;">Resmi</th>
-                            <th style="user-select: none;">Yazar Adı</th>
+                            <th style="user-select: none;">Yayınevi ID</th>
+                            <th style="user-select: none;">Yayınevi Resmi</th>
+                            <th style="user-select: none;">Yayınevi Adı</th>
                             <th style="user-select: none;">Telefon</th>
-                            <th style="user-select: none;">Doğum Yılı</th>
                             <th style="user-select: none;">Mail</th>
+                            <th style="user-select: none;">Adres</th>
                             <th style="user-select: none;">Düzenle</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($writers as $val)
+                        @foreach ($publishers as $val)
                             <tr>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->writer_img }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->writer_name }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->publisher_id }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->publisher_img }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->publisher_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->phone }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->birth_year }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->email }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->address }}</td>
                                 <td>
-                                    <a href="{{ route('assistant.writer', $val->id) }}"
+                                    <a href="{{ route('assistant.publisher', $val->publisher_id) }}"
                                         class="btn btn-primary">Göster</a>
                                 </td>
                             </tr>
@@ -47,31 +47,31 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel1">Yazar Ekle</h5>
+                <h5 class="modal-title" id="myModalLabel1">Yayınevi Ekle</h5>
                 <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
                     <i data-feather="x"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <form id="addWriterForm" method="post" action="{{ route('assistant.addWriter') }}">
+                <form id="addWriterForm" method="post" action="{{ route('assistant.addPublisher') }}">
                     @csrf
                     <div class="form-group">
-                        <label>Yazarın Resmi
-                            @error('writer_img')
+                        <label>Yayınevi Resmi
+                            @error('publisher_img')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input type="file" class="form-control" name="writer_img" placeholder="Yazarın resmi giriniz"
-                            value="{{ old('writer_img') }}" />
+                        <input type="file" class="form-control" name="publisher_img" placeholder="Yayınevi resmi giriniz"
+                            value="{{ old('publisher_img') }}" />
                     </div>
                     <div class="form-group">
-                        <label>Yazarın Adı
-                            @error('writer_name')
+                        <label>Yayınevi Adı
+                            @error('publisher_name')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" name="writer_name" placeholder="Yazarın adı giriniz"
-                            value="{{ old('writer_name') }}" />
+                        <input class="form-control" name="publisher_name" placeholder="Yayınevi adı giriniz"
+                            value="{{ old('publisher_name') }}" />
                     </div>
                     <div class="form-group">
                         <label>Telefonu
@@ -79,7 +79,7 @@
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" name="phone" placeholder="Yazarın telefonu giriniz"
+                        <input class="form-control" name="phone" placeholder="Yayınevinin telefonu giriniz"
                             value="{{ old('phone') }}" />
                     </div>
                     <div class="form-group">
@@ -88,17 +88,17 @@
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" type="mail" name="email" placeholder="Yazarın e-maili giriniz"
+                        <input class="form-control" type="mail" name="email" placeholder="Yayınevinin e-maili giriniz"
                             value="{{ old('email') }}" />
                     </div>
                     <div class="form-group">
-                        <label>Yazarın Doğum Yılı
-                            @error('birth_year')
+                        <label>Yazarın Adresi
+                            @error('address')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" name="birth_year" placeholder="Yazarın doğum yılını giriniz"
-                            value="{{ old('birth_year') }}" />
+                        <input class="form-control" name="address" placeholder="Yayınevinin adresi giriniz"
+                            value="{{ old('address') }}" />
                     </div>
 
                 </form>

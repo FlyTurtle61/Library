@@ -10,8 +10,8 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th style="user-select: none;">Kategori Resmi</th>
                             <th style="user-select: none;">Kategori ID</th>
+                            <th style="user-select: none;">Kategori Resmi</th>
                             <th style="user-select: none;">Kategori Adı</th>
                             <th style="user-select: none;">Düzenle</th>
                         </tr>
@@ -19,9 +19,9 @@
                     <tbody>
                         @foreach ($categories as $val)
                             <tr>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->image }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->name }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->category_img }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->category_name }}</td>
                                 <td>
                                     <a href="{{ route('assistant.category', $val->id) }}"
                                         class="btn btn-primary">Göster</a>
@@ -52,21 +52,21 @@
 
                     <div class="form-group">
                         <label>Kategori Resmi
-                            @error('image')
+                            @error('category_img')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input type="file" class="form-control" name="image" placeholder="Fotoğraf yükleyiniz"
-                            value="{{ old('image') }}" />
+                        <input type="file" class="form-control" name="category_img" placeholder="Fotoğraf yükleyiniz"
+                            value="{{ old('category_img') }}" />
                     </div>
                     <div class="form-group">
                         <label>Kategori Adı
-                            @error('name')
+                            @error('category_name')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input class="form-control" type="text" name="name" placeholder="Kategori adı giriniz"
-                            value="{{ old('name') }}" />
+                        <input class="form-control" type="text" name="category_name" placeholder="Kategori adı giriniz"
+                            value="{{ old('category_name') }}" />
                     </div>
                 </form>
             </div>

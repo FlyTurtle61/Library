@@ -29,33 +29,45 @@
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
                                             <label for="writer-name-icon">Kategori Resmi
-                                                @error("image")
+                                                @error("category_img")
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input name="image" type="file" value="{{ $category->image }}"
-                                                    class="form-control" placeholder="Yazar adı giriniz"
+                                                <input name="category_img" type="file" value="{{ $category->category_img }}"
+                                                    class="form-control" placeholder="Kategori resmi seçiniz"
                                                     id="writer-name-icon">
                                                 <div class="form-control-icon">
-                                                    <i class="bi bi-person"></i>
+                                                    <i class="bi bi-file-arrow-down"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="writer-email-icon">Kategori Adı
-                                                @error("name")
+                                            <label for="kitap-turu-icon">Kitap Türü
+                                                @error('kitap_turu')
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input name="name" type="name" value="{{ $category->name }}"
-                                                    class="form-control" placeholder="Yazar emaili giriniz"
-                                                    id="writer-name-icon">
+                                                <div class="input-group mb-3">
+                                                    <select class="form-select form-control" id="inputGroupSelect01"
+                                                        class="form-control" name="category_name"
+                                                        placeholder="Kitap türünü giriniz">
+                                                        <option selected value="{{ $category->category_name }}">
+                                                            {{ $category->category_name }}</option>
+                                                        <option value="Dram">Dram</option>
+                                                        <option value="Macera">Macera</option>
+                                                        <option value="Aksiyon">Aksiyon</option>
+                                                        <option value="Polisiye">Polisiye</option>
+                                                        <option value="Korku">Korku</option>
+                                                        <option value="Fantastik">Fantastik</option>
+                                                        <option value="Bilim Kurgu">Bilim Kurgu</option>
+                                                    </select>
+                                                </div>
                                                 <div class="form-control-icon">
-                                                    <i class="bi bi-envelope"></i>
+                                                    <i class="bi bi-list-ul"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,3 +97,8 @@
     @method("delete")
     @csrf
 </form>
+
+{{-- @foreach ($category as $value )
+<option value="$value->category_name">{{ $value->category_name }}</option>
+
+@endforeach --}}

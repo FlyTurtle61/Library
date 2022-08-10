@@ -23,26 +23,20 @@
             <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-person"></i>
-                    <span>Asistan İşlemleri</span>
+                    <span>İşlemler</span>
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item">
                         <a href="{{ route('assistant.books') }}">Kitap Ekle</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="">Kitap Listele</a>
-                    </li>
-                    <li class="submenu-item">
                         <a href="{{ route('assistant.writers') }}">Yazar Ekle</a>
-                    </li>
-                    <li class="submenu-item">
-                        <a href="">Yazar Listele</a>
                     </li>
                     <li class="submenu-item">
                         <a href="{{ route('assistant.categories') }}">Kategori Ekle</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="">Kategori Listele</a>
+                        <a href="{{ route('assistant.publishers') }}">Yayınevi Ekle</a>
                     </li>
                 </ul>
             </li>

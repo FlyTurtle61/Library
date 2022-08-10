@@ -29,6 +29,23 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
+                                            <label for="book-name-icon">Kitap Resmi
+                                                @error('book_img')
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                            </label>
+                                            <div class="position-relative">
+                                                <input name="book_img" type="file" value="{{ $book->book_img }}"
+                                                    class="form-control" placeholder="Kitap resmi giriniz"
+                                                    id="book-name-icon">
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-book-half"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group has-icon-left">
                                             <label for="book-name-icon">Kitap Adı
                                                 @error('book_name')
                                                     <strong class="text-danger">{{ $message }}</strong>
@@ -46,13 +63,30 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="yazar-adi-icon">Yazar Adı
-                                                @error('yazar_adi')
+                                            <label for="book-name-icon">Basım Yılı
+                                                @error('publication_year')
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input type="text" name="yazar_adi" value="{{ $book->yazar_adi }}"
+                                                <input name="publication_year" type="text" value="{{ $book->publication_year }}"
+                                                    class="form-control" placeholder="Kitap adı giriniz"
+                                                    id="book-name-icon">
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-book-half"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group has-icon-left">
+                                            <label for="yazar-adi-icon">Cilt Sayısı
+                                                @error('volume_number')
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                            </label>
+                                            <div class="position-relative">
+                                                <input type="text" name="volume_number" value="{{ $book->volume_number }}"
                                                     class="form-control" placeholder="Yazar adı giriniz"
                                                     id="yazar-adi-icon">
                                                 <div class="form-control-icon">
@@ -64,13 +98,13 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="yazar-adi-icon">Basım Yılı
-                                                @error('basim_yili')
+                                            <label for="yazar-adi-icon">Sayfa Sayısı
+                                                @error('page_number')
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input type="text" name="basim_yili" value="{{ $book->basim_yili }}"
+                                                <input type="text" name="page_number" value="{{ $book->page_number }}"
                                                     class="form-control" placeholder="Basım yılı giriniz"
                                                     id="basim-yili-icon">
                                                 <div class="form-control-icon">
@@ -79,7 +113,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+{{--                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
                                             <label for="kitap-turu-icon">Kitap Türü
                                                 @error('kitap_turu')
@@ -107,7 +141,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class=" container">
                                         <div class="d-flex row  col-12 m-2">
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Güncelle</button>

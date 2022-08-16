@@ -21,9 +21,12 @@ class AssistantController extends Controller
     public function books()
     {
         $data1["books"] = Book::all();
+        $data1["categories"] = Category::all();
+        $data1["publishers"] = Publisher::all();
+        $data1["writers"] = Writer::all();
         $data["title"] = "Kitap Ekle";
         $data["page_title"] = "Kitap Ekle";
-        $data["content"] = view("users.assistant.books.books", $data1);
+        $data["content"] = view("users.assistant.books.books",$data1);
         return view("users.assistant.main", $data);
     }
     public function addBook(Request $request)
@@ -41,14 +44,23 @@ class AssistantController extends Controller
             "publication_year" => "required",
             "page_number" => "required",
             "volume_number" => "required",
+/*             "publisher_name" => "required",
+            "category_name" => "required",
+            "writer_name" => "required", */
 
         ], $error_message)->validate();
         $book = new Book();
+/*         $publisher = new Publisher();
+        $category = new Category();
+        $writer = new Writer(); */
         $book->book_name = $request->book_name;
         $book->book_img = $request->book_img;
         $book->publication_year = $request->publication_year;
         $book->page_number = $request->page_number;
         $book->volume_number = $request->volume_number;
+/*         $publisher->publisher_name = $request->publisher_name;
+        $category->category_name = $request->category_name;
+        $writer->writer_name = $request->writer_name; */
         $book->save();
         return redirect()->route("assistant.books");
     }

@@ -3,7 +3,7 @@
 
         <div class="card-body">
             <div class="btn-group">
-                <button data-bs-toggle="modal" data-bs-target="#addWriterModal" class="btn btn-info m-2">Yeni Yazar Ekle
+                <button data-bs-toggle="modal" data-bs-target="#addWriterModal" class="btn btn-info m-2">Yeni Yayınevi Ekle
                     +</button>
             </div>
             <div class="table-responsive">

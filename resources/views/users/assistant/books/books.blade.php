@@ -3,7 +3,8 @@
 
         <div class="card-body">
             <div class="btn-group">
-                <button data-bs-toggle="modal" data-bs-target="#addBookModal" class="btn btn-info m-2">Yeni Kitap Ekle +</button>
+                <button data-bs-toggle="modal" data-bs-target="#addBookModal" class="btn btn-info m-2">Yeni Kitap Ekle
+                    +</button>
             </div>
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -12,6 +13,9 @@
                             <th style="user-select: none;">Kitap ID</th>
                             <th style="user-select: none;">Kitap Resmi</th>
                             <th style="user-select: none;">Kitap Adı</th>
+                            <th style="user-select: none;">Yazar</th>
+                            <th style="user-select: none;">Yayınevi</th>
+                            <th style="user-select: none;">Kategori</th>
                             <th style="user-select: none;">Basım Yılı</th>
                             <th style="user-select: none;">Sayfa Sayısı</th>
                             <th style="user-select: none;">Cilt Sayısı</th>
@@ -22,8 +26,11 @@
                         @foreach ($books as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->book_img}}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->book_img }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->book_name }}</td>
+                                <td style="user-select: none; cursor: pointer;"></td>
+                                <td style="user-select: none; cursor: pointer;"></td>
+                                <td style="user-select: none; cursor: pointer;"></td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->publication_year }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->page_number }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->volume_number }}</td>
@@ -72,25 +79,52 @@
                             value="{{ old('book_name') }}" />
                     </div>
 {{--                     <div class="form-group">
-                        <label>Kitabın Türü
-                            @error('kitap_turu')
+                        <label>Kitabın Yazarı
+                            @error('writer_name')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
                         <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="kitap_turu" placeholder="Kitap türünü giriniz"
-                            value="{{ old('kitap_turu') }}">
-                              <option selected>Kitap türü Seçiniz</option>
-                              <option value="Dram">Dram</option>
-                              <option value="Macera">Macera</option>
-                              <option value="Aksiyon">Aksiyon</option>
-                              <option value="Polisiye">Polisiye</option>
-                              <option value="Korku">Korku</option>
-                              <option value="Korku">Korku</option>
-                              <option value="Fantastik">Fantastik</option>
-                              <option value="Bilim Kurgu">Bilim Kurgu</option>
+                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="writer_name"
+                                placeholder="Kitap türünü giriniz" value="{{ old('writer_name') }}">
+                                <option selected>Yazar Adı Seçiniz</option>
+                                @foreach ($writers as $val)
+                                    <option value="">{{ $val->writer_name }}</option>
+                                @endforeach
                             </select>
-                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Kitabın Türü
+                            @error('category_name')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="category_name "
+                                placeholder="Kitap türünü giriniz" value="{{ old('category_name') }}">
+                                <option selected>Kitap türü Seçiniz</option>
+                                @foreach ($categories as $val)
+                                    <option value="">{{ $val->category_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Yayınevi
+                            @error('publisher_name')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="publisher_name"
+                                placeholder="Kitap türünü giriniz" value="{{ old('publisher_name') }}">
+                                <option selected>Yayınevi Seçiniz</option>
+                                @foreach ($publishers as $val)
+                                    <option value="">{{ $val->publisher_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div> --}}
                     <div class="form-group">
                         <label>Kitabın Basım Yılı
@@ -119,7 +153,7 @@
                         <input class="form-control" name="page_number" placeholder="Kitabın sayfa sayısını giriniz"
                             value="{{ old('page_number') }}" />
                     </div>
-                        </form>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -143,3 +177,5 @@
         @endif
     }
 </script>
+
+

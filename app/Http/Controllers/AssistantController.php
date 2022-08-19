@@ -44,23 +44,23 @@ class AssistantController extends Controller
             "publication_year" => "required",
             "page_number" => "required",
             "volume_number" => "required",
-/*             "publisher_name" => "required",
             "category_name" => "required",
-            "writer_name" => "required", */
+            "publisher_name" => "required",
+            "book_name" => "required",
 
         ], $error_message)->validate();
         $book = new Book();
-/*         $publisher = new Publisher();
+        $publisher = new Publisher();
         $category = new Category();
-        $writer = new Writer(); */
+        $writer = new Writer();
         $book->book_name = $request->book_name;
         $book->book_img = $request->book_img;
         $book->publication_year = $request->publication_year;
         $book->page_number = $request->page_number;
         $book->volume_number = $request->volume_number;
-/*         $publisher->publisher_name = $request->publisher_name;
+        $publisher->publisher_name = $request->publisher_name;
         $category->category_name = $request->category_name;
-        $writer->writer_name = $request->writer_name; */
+        $writer->writer_name = $request->writer_name;
         $book->save();
         return redirect()->route("assistant.books");
     }
@@ -313,6 +313,14 @@ class AssistantController extends Controller
     {
         Publisher::where("id", $id)->delete();
         return redirect()->route("assistant.publishers");
+    }
+
+
+    public function reader(){
+        $data["title"] = "Kutuphane";
+        $data["page_title"] = "Asistan Anasayfa";
+        $data["content"] = view("users.assistant.anasayfa.anasayfa");
+        return view("users.assistant.main", $data);
     }
 }
 

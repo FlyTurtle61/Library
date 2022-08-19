@@ -17,6 +17,6 @@ class Category extends Model
     protected $table="categories";
     protected $primaryKey="id";
     protected $fillable=[
-        'name'
+        'category_name'
     ];
 }

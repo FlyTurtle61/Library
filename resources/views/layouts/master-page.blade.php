@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
+    <link type="image/png" rel="icon" sizes="96x96" href="/kitap/images/book-1.png"> <!-- Yeni sekmenin yanındaki ikon -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
 

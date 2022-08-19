@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AssistantController;
+use App\Http\Controllers\ReaderController;
 use Illuminate\Support\Facades\DB;
 
 
@@ -48,44 +49,46 @@ Route::group(["prefix" => "assistant", "middleware" => ["auth", "verified", "can
     Route::post("writer", [AssistantController::class, "updateWriter"])->name("assistant.updateWriter");
     Route::delete("writer/{id}", [AssistantController::class, "deleteWriter"])->name("assistant.deleteWriter");
 
-    Route::get("categories",[AssistantController::class,"categories"])->name("assistant.categories");
+    Route::get("categories", [AssistantController::class, "categories"])->name("assistant.categories");
     Route::post("categories", [AssistantController::class, "addCategory"])->name("assistant.addCategory");
     Route::get("category/{id}", [AssistantController::class, "getCategory"])->name("assistant.category");
     Route::post("category", [AssistantController::class, "updateCategory"])->name("assistant.updateCategory");
     Route::delete("category/{id}", [AssistantController::class, "deleteCategory"])->name("assistant.deleteCategory");
 
-    Route::get("publishers",[AssistantController::class,"publishers"])->name("assistant.publishers");
+    Route::get("publishers", [AssistantController::class, "publishers"])->name("assistant.publishers");
     Route::post("publishers", [AssistantController::class, "addPublisher"])->name("assistant.addPublisher");
     Route::get("publisher/{id}", [AssistantController::class, "getPublisher"])->name("assistant.publisher");
     Route::post("publisher", [AssistantController::class, "updatePublisher"])->name("assistant.updatePublisher");
     Route::delete("publisher/{id}", [AssistantController::class, "deletePublisher"])->name("assistant.deletePublisher");
 });
 
-
-    Route::get("test", function () {
-        $data["kategoriler"] = DB::table("categories")->get();
-        return view("test", $data);
+    Route::group(["prefix" => "Reader", "middleware" => ["auth", "verified", "can:isReader"]], function () {
+        Route::get("main", [ReaderController::class, "index"])->name("reader.main");
     });
 
 
-    Route::post("kategoriler", function (Request $request) {
+Route::get("test", function () {
+    $data["kategoriler"] = DB::table("categories")->get();
+    return view("test", $data);
+});
 
-        $id = DB::table("categories")->insertGetId([
-            "name" => $request->kategori
+
+Route::post("kategoriler", function (Request $request) {
+
+    $id = DB::table("categories")->insertGetId([
+        "category_name" => $request->category_name
+    ]);
+    if ($id) {
+        return response()->json([
+            "result" => true,
+            "kategori_id" => $id
         ]);
-        if($id){
-            return response()->json([
-                "result"=>true,
-                "kategori_id"=>$id
-            ]);
-        }else{
-            return response()->json([
-                "result"=>false
-            ]);
-        }
-
-
-    })->name("kategori.ekle");
+    } else {
+        return response()->json([
+            "result" => false
+        ]);
+    }
+})->name("kategori.ekle");
 
 
 

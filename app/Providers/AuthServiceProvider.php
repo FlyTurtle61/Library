@@ -34,6 +34,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define("isAssistant",function($user){
             return $user->role==env("ASSISTANT");
         });
+        Gate::define("isReader",function($user){
+            return $user->role==env("READER");
+        });
         //
     }
 }

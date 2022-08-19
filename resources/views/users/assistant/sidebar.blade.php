@@ -22,8 +22,8 @@
 
             <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
-                    <i class="bi bi-person"></i>
-                    <span>İşlemler</span>
+                    <i class="bi bi-journal-arrow-down"></i>
+                    <span>Kitap İşlemler</span>
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item">
@@ -42,21 +42,21 @@
             </li>
             <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
-                    <i class="bi bi-person"></i>
-                    <span>İşlemler</span>
+                    <i class="bi bi-bookmark-heart"></i>
+                    <span>Talepler</span>
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.books') }}">Kitap Ekle</a>
+                        <a href="">Kitap Talebi</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.writers') }}">Yazar Ekle</a>
+                        <a href="">Yorum Talebi</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.categories') }}">Kategori Ekle</a>
+                        <a href="">Kitap</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ route('assistant.publishers') }}">Yayınevi Ekle</a>
+                        <a href="">Kitap</a>
                     </li>
                 </ul>
             </li>

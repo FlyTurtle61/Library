@@ -46,6 +46,7 @@
     <tr>
         <td>kategori id</td>
         <td>kategori adı</td>
+        <td>kategori resmi</td>
     </tr>
     </thead>
 
@@ -53,7 +54,8 @@
     @foreach($kategoriler as $value)
         <tr>
             <td>{{$value->id}}</td>
-            <td>{{$value->name}}</td>
+            <td>{{$value->category_name}}</td>
+            <td>{{$value->category_img}}</td>
         </tr>
     @endforeach
     </tbody>

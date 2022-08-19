@@ -78,7 +78,7 @@
                         <input class="form-control" name="book_name" placeholder="Kitap adı giriniz"
                             value="{{ old('book_name') }}" />
                     </div>
-{{--                     <div class="form-group">
+                    <div class="form-group">
                         <label>Kitabın Yazarı
                             @error('writer_name')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -86,7 +86,7 @@
                         </label>
                         <div class="input-group mb-3">
                             <select class="form-select" id="inputGroupSelect01" class="form-control" name="writer_name"
-                                placeholder="Kitap türünü giriniz" value="{{ old('writer_name') }}">
+                                placeholder="Yazar adı seçiniz" value="{{ old('writer_name') }}">
                                 <option selected>Yazar Adı Seçiniz</option>
                                 @foreach ($writers as $val)
                                     <option value="">{{ $val->writer_name }}</option>
@@ -102,7 +102,7 @@
                         </label>
                         <div class="input-group mb-3">
                             <select class="form-select" id="inputGroupSelect01" class="form-control" name="category_name "
-                                placeholder="Kitap türünü giriniz" value="{{ old('category_name') }}">
+                                placeholder="Kitap türünü seçiniz" value="{{ old('category_name') }}">
                                 <option selected>Kitap türü Seçiniz</option>
                                 @foreach ($categories as $val)
                                     <option value="">{{ $val->category_name }}</option>
@@ -118,14 +118,14 @@
                         </label>
                         <div class="input-group mb-3">
                             <select class="form-select" id="inputGroupSelect01" class="form-control" name="publisher_name"
-                                placeholder="Kitap türünü giriniz" value="{{ old('publisher_name') }}">
+                                placeholder="Kitap yayın evini seçiniz" value="{{ old('publisher_name') }}">
                                 <option selected>Yayınevi Seçiniz</option>
                                 @foreach ($publishers as $val)
                                     <option value="">{{ $val->publisher_name }}</option>
                                 @endforeach
                             </select>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="form-group">
                         <label>Kitabın Basım Yılı
                             @error('publication_year')
@@ -177,5 +177,3 @@
         @endif
     }
 </script>
-
-

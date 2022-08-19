@@ -18,10 +18,13 @@ class GuestController extends Controller
 
         }
         else if(Auth::user()->role==env("SUPER_ADMIN")){
-            return redirect()->route("super_admin");
+            return redirect()->route("super-admin.main");
         }
         else if(Auth::user()->role==env("ASSISTANT")){
             return redirect()->route("assistant.main");
+        }
+        else if(Auth::user()->role==env("READER")){
+            return redirect()->route("reader.main");
         }
     }
 }

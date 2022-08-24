@@ -39,8 +39,7 @@
         </div>
     </div>
 </div>
-</div>
-</div>
+
 
 <div class="modal" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">

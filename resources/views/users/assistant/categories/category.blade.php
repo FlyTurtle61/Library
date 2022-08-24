@@ -5,7 +5,7 @@
 
                 <div class="card-content">
                     <div class="card-body">
-                        <form class="form form-vertical" action="{{ route('assistant.updateCategory') }}" method="post">
+                        <form class="form form-vertical" enctype="multipart/form-data" action="{{ route('assistant.updateCategory') }}" method="post">
                             <input type="hidden" name='category_id' value="{{ $category->id }}">
                             @csrf
                             <div class="form-body">
@@ -28,25 +28,20 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="writer-name-icon">Kategori Resmi
-                                                @error("category_img")
-                                                    <strong class="text-danger">{{ $message }}</strong>
-                                                @enderror
+                                            <label for="book-name-icon">Kategori Resmi
                                             </label>
                                             <div class="position-relative">
-                                                <input name="category_img" type="file" value="{{ $category->category_img }}"
-                                                    class="form-control" placeholder="Kategori resmi seçiniz"
-                                                    id="writer-name-icon">
-                                                <div class="form-control-icon">
-                                                    <i class="bi bi-file-arrow-down"></i>
+                                                    <img
+                                                    src="{{ str_replace('public', '/storage', $category->category_img) }}" width="80"
+                                                    height="100" class="img img-responsive">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="writer-name-icon">Kategori İsmi
-                                                @error("category_img")
+                                            <label for="category-name-icon">Kategori İsmi
+                                                @error("category_name")
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
@@ -61,13 +56,13 @@
                                         </div>
                                     </div>
                                     <div class=" container">
-                                        <div class="d-flex row  col-12 m-2">
+                                        <div class="d-flex row  col-12 ">
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Güncelle</button>
                                         </div>
-                                        <div class="d-flex row  col-12 m-2">
+                                        <div class="d-flex row  col-12 ">
                                         <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                         </div>
-                                        <div class="d-flex row col-12 m-2">
+                                        <div class="d-flex row col-12 ">
                                             <button onclick="$('#deleteCategoryForm').submit();" type="button" class="btn btn-danger me-1 mb-1">Sil</button>
                                         </div>
                                     </div>

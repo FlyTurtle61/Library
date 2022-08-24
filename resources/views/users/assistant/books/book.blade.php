@@ -35,11 +35,9 @@
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input name="book_img" type="file" value="{{ $book->book_img }}"
-                                                    class="form-control" placeholder="Kitap resmi giriniz"
-                                                    id="book-name-icon">
-                                                <div class="form-control-icon">
-                                                    <i class="bi bi-book-half"></i>
+                                                    <img
+                                                    src="{{ str_replace('public', '/storage', $book->book_img) }}" width="80"
+                                                    height="100" class="img img-responsive">
                                                 </div>
                                             </div>
                                         </div>
@@ -143,17 +141,18 @@
                                         </div>
                                     </div> --}}
                                     <div class=" container">
-                                        <div class="d-flex row  col-12 m-2">
+                                        <div class="d-flex row  col-12 ">
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Güncelle</button>
                                         </div>
-                                        <div class="d-flex row  col-12 m-2">
+                                        <div class="d-flex row  col-12 ">
                                             <button type="reset"
                                                 class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                         </div>
-                                        <div class="d-flex row col-12 m-2">
+                                        <div class="d-flex row col-12 ">
                                             <button onclick="$('#deleteBookForm').submit();" type="button"
                                                 class="btn btn-danger me-1 mb-1">Sil</button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
 
                 <div class="card-content">
                     <div class="card-body">
-                        <form class="form form-vertical" action="{{ route('assistant.updateWriter') }}" method="post">
+                        <form class="form form-vertical" enctype="multipart/form-data" action="{{ route('assistant.updateWriter') }}" method="post">
                             <input type="hidden" name='writer_id' value="{{ $writer->id }}">
                             @csrf
                             <div class="form-body">
@@ -28,17 +28,15 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group has-icon-left">
-                                            <label for="writer-name-icon">Yazar Resmi
-                                                @error("writer_img")
+                                            <label for="book-name-icon">Yazar Resmi
+                                                @error('book_img')
                                                     <strong class="text-danger">{{ $message }}</strong>
                                                 @enderror
                                             </label>
                                             <div class="position-relative">
-                                                <input name="writer_img" type="file" value="{{ $writer->writer_img }}"
-                                                    class="form-control" placeholder="Yazar resmi yükleyiniz"
-                                                    id="writer-name-icon">
-                                                <div class="form-control-icon">
-                                                    <i class="bi bi-person"></i>
+                                                    <img
+                                                    src="{{ str_replace('public', '/storage', $writer->writer_img) }}" width="80"
+                                                    height="100" class="img img-responsive">
                                                 </div>
                                             </div>
                                         </div>

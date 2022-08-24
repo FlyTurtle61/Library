@@ -1,6 +1,6 @@
 <section id="basic-vertical-layouts">
     <div class="row match-height">
-        <div class="col-md-6 col-12">
+        <div class=" col-12">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title"></h4>
@@ -84,9 +84,11 @@
                                             <label for="role-id-icon">Role</label>
                                             <div class="position-relative">
                                                 <select class="form-control" id="role-id-icon" name="role">
-                                                    <option value="3">Admin</option>
                                                     <option value="2">Super Admin</option>
+                                                    <option value="3">Admin</option>
                                                     <option value="1">Asistan</option>
+                                                    <option value="4">Reader</option>
+
                                                 </select>
 
                                                 <div class="form-control-icon">
@@ -95,11 +97,19 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class=" container">
+                                        <div class="d-flex row  col-12 m-1">
+                                            <button type="submit" class="btn btn-primary me-1 mb-1">Güncelle</button>
+                                        </div>
+                                        <div class="d-flex row  col-12 m-1">
+                                            <button type="reset"
+                                                class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                        </div>
+                                        <div class="d-flex row col-12 m-1">
+                                            <button onclick="$('#deleteUserForm').submit();" type="button"
+                                                class="btn btn-danger me-1 mb-1">Sil</button>
+                                        </div>
 
-                                    <div class="col-12 d-flex justify-content-end">
-                                        <button onclick="$('#deleteUserForm').submit();" type="button" class="btn btn-danger me-1 mb-1">Sil</button>
-                                        <button type="submit" class="btn btn-primary me-1 mb-1">Güncelle</button>
-                                        <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                     </div>
                                 </div>
                             </div>

@@ -20,7 +20,9 @@
                         @foreach ($categories as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->category_img }}</td>
+                                <td style="user-select: none; cursor: pointer;"><img
+                                    src="{{ str_replace('public', '/storage', $val->category_img) }}" width="40"
+                                    height="50" class="img img-responsive"></td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->category_name }}</td>
                                 <td>
                                     <a href="{{ route('assistant.category', $val->id) }}"
@@ -34,8 +36,7 @@
         </div>
     </div>
 </div>
-</div>
-</div>
+
 
 <div class="modal" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -47,7 +48,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="addCategoryForm" method="post" action="{{ route('assistant.addCategory') }}">
+                <form id="addCategoryForm" method="post" enctype="multipart/form-data" action="{{ route('assistant.addCategory') }}">
                     @csrf
 
                     <div class="form-group">

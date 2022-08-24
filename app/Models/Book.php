@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use \App\Models\Category;
 
 class Book extends Model
 {
@@ -17,8 +18,11 @@ class Book extends Model
     protected $primaryKey="id";
     protected $fillable=[
         'book_name',
-        'yazar_adi',
-        'kitap_turu',
+        'writer_name',
+        'book_img',
+        'publisher_id',
+        'volume_number',
+        'publication_year',
         'delivery_date',
     ];
 }

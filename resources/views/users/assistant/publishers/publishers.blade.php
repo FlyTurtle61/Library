@@ -3,7 +3,7 @@
 
         <div class="card-body">
             <div class="btn-group">
-                <button data-bs-toggle="modal" data-bs-target="#addWriterModal" class="btn btn-info m-2">Yeni Yayınevi Ekle
+                <button data-bs-toggle="modal" data-bs-target="#addPublisherModal" class="btn btn-info m-2">Yeni Yayınevi Ekle
                     +</button>
             </div>
             <div class="table-responsive">
@@ -23,7 +23,9 @@
                         @foreach ($publishers as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->publisher_id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->publisher_img }}</td>
+                                <td style="user-select: none; cursor: pointer;"><img
+                                    src="{{ str_replace('public', '/storage', $val->publisher_img) }}" width="40"
+                                    height="50" class="img img-responsive"></td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->publisher_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->phone }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->email }}</td>
@@ -40,10 +42,9 @@
         </div>
     </div>
 </div>
-</div>
-</div>
 
-<div class="modal" id="addWriterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+
+<div class="modal" id="addPublisherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -53,7 +54,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="addWriterForm" method="post" action="{{ route('assistant.addPublisher') }}">
+                <form id="addPublisherForm" method="post" enctype="multipart/form-data" action="{{ route('assistant.addPublisher') }}">
                     @csrf
                     <div class="form-group">
                         <label>Yayınevi Resmi
@@ -108,7 +109,7 @@
                     <i class="bx bx-x d-block d-sm-none"></i>
                     <span class="d-none d-sm-block">Kapat</span>
                 </button>
-                <button type="button" class="btn btn-primary ml-1" onclick="$('#addWriterForm').submit();">
+                <button type="button" class="btn btn-primary ml-1" onclick="$('#addPublisherForm').submit();">
                     <i class="bx bx-check d-block d-sm-none"></i>
                     <span class="d-none d-sm-block">Kaydet</span>
                 </button>
@@ -121,7 +122,7 @@
     window.onload = function() {
 
         @if ($errors->any())
-            $("#addWriterModal").modal("show");
+            $("#addPublisherModal").modal("show");
         @endif
     }
 </script>

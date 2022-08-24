@@ -16,9 +16,12 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string("book_name",100);
-            $table->bigInteger("yazar_id")->unsigned();
+            $table->string("page_number",100);
+            $table->string("volume_number",10);
+            $table->integer("publication_year",4);
+            $table->string("book_img",9999);
             $table->timestamps();
-            
+
         });
     }
 

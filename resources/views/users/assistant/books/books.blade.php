@@ -26,11 +26,13 @@
                         @foreach ($books as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->book_img }}</td>
+                                <td style="user-select: none; cursor: pointer;"><img
+                                        src="{{ str_replace('public', '/storage', $val->book_img) }}" width="40"
+                                        height="50" class="img img-responsive"></td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->book_name }}</td>
-                                <td style="user-select: none; cursor: pointer;"></td>
-                                <td style="user-select: none; cursor: pointer;"></td>
-                                <td style="user-select: none; cursor: pointer;"></td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->writer_name }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->publisher_name }}</td>
+                                <td style="user-select: none; cursor: pointer;">{{ $val->category_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->publication_year }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->page_number }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->volume_number }}</td>
@@ -41,11 +43,12 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div>
+                     {{ $books->onEachSide(25)->links() }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 
 <div class="modal" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
@@ -58,9 +61,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="addBookForm" method="post" action="{{ route('assistant.addBook') }}">
+                <form id="addBookForm" method="post" enctype="multipart/form-data" action="{{ route('assistant.addBook') }}">
                     @csrf
-                    <div class="form-group">
+                     <div class="form-group">
                         <label>Kitabın Resmi
                             @error('book_img')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -78,7 +81,7 @@
                         <input class="form-control" name="book_name" placeholder="Kitap adı giriniz"
                             value="{{ old('book_name') }}" />
                     </div>
-                    <div class="form-group">
+                     <div class="form-group">
                         <label>Kitabın Yazarı
                             @error('writer_name')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -89,7 +92,7 @@
                                 placeholder="Yazar adı seçiniz" value="{{ old('writer_name') }}">
                                 <option selected>Yazar Adı Seçiniz</option>
                                 @foreach ($writers as $val)
-                                    <option value="">{{ $val->writer_name }}</option>
+                                    <option value="{{ $val->id }}">{{ $val->writer_name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -101,11 +104,12 @@
                             @enderror
                         </label>
                         <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="category_name "
-                                placeholder="Kitap türünü seçiniz" value="{{ old('category_name') }}">
+                            <select class="form-select" id="inputGroupSelect01" class="form-control"
+                                name="category_name" placeholder="Kitap türünü seçiniz"
+                                value="{{ old('category_name') }}">
                                 <option selected>Kitap türü Seçiniz</option>
                                 @foreach ($categories as $val)
-                                    <option value="">{{ $val->category_name }}</option>
+                                    <option value="{{ $val->id }}">{{ $val->category_name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -117,11 +121,12 @@
                             @enderror
                         </label>
                         <div class="input-group mb-3">
-                            <select class="form-select" id="inputGroupSelect01" class="form-control" name="publisher_name"
-                                placeholder="Kitap yayın evini seçiniz" value="{{ old('publisher_name') }}">
-                                <option selected>Yayınevi Seçiniz</option>
+                            <select class="form-select" id="inputGroupSelect01" class="form-control"
+                                name="publisher_name" placeholder="Kitap yayın evini seçiniz"
+                                value="{{ old('publisher_name') }}">
+                                <option value="">Yayınevi Seçiniz</option>
                                 @foreach ($publishers as $val)
-                                    <option value="">{{ $val->publisher_name }}</option>
+                                    <option value="{{ $val->publisher_id  }}">{{ $val->publisher_name }}</option>
                                 @endforeach
                             </select>
                         </div>

@@ -1,8 +1,14 @@
+<style>
+    .sidebar_logo {
+        width: 200px !important;
+        height: 100px !important;
+    }
+</style>
 <div class="sidebar-wrapper active">
     <div class="sidebar-header">
         <div class="d-flex justify-content-between">
-            <div class="logo">
-                <a href="main"><img src="/assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+            <div>
+                <a href="main"><img src="/kitap/images/book.png" class="sidebar_logo" alt="Logo" srcset=""></a>
             </div>
             <div class="toggler">
                 <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>

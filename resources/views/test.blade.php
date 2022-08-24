@@ -1,5 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <h1>Ajax ile işlemler</h1>
 
 <input id="name" placeholder="Kategori ismi giriniz..">
@@ -60,3 +58,5 @@
     @endforeach
     </tbody>
 </table>
+
+

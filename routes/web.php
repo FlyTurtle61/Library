@@ -27,6 +27,7 @@ Route::get("/guest", [GuestController::class, "index"])->name("guest");
 
 Route::group(["prefix" => "admin", "middleware" => ["auth", "verified", "can:isAdmin"]], function () {
     Route::get("main", [AdminController::class, "index"])->name("admin.main");
+
     Route::get("users", [AdminController::class, "users"])->name("admin.users");
     Route::post("users", [AdminController::class, "addUser"])->name("admin.addUser");
     Route::get("user/{id}", [AdminController::class, "getUser"])->name("admin.user");
@@ -64,6 +65,9 @@ Route::group(["prefix" => "assistant", "middleware" => ["auth", "verified", "can
 
     Route::group(["prefix" => "Reader", "middleware" => ["auth", "verified", "can:isReader"]], function () {
         Route::get("main", [ReaderController::class, "index"])->name("reader.main");
+
+        Route::get("books", [ReaderController::class, "readers"])->name("reader.books");
+        Route::get("book", [ReaderController::class, "reader"])->name("reader.book");
     });
 
 

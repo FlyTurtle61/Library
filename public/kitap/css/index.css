@@ -6,11 +6,11 @@
 
     padding: 0;
 
-  }
+}
 
-  body {
+body {
 
-    background: url(../images/kitap-3.jpg);
+    background: url(../images/wallpaper.jpg);
 
     background-size: 100%;
 
@@ -18,55 +18,57 @@
 
 
 
-  }
+}
 
 
 
-  /* Scrollbar Styling */
+/* Scrollbar Styling */
 
 
 
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
 
-  width: 10px;
+    width: 10px;
 
-  max-width: 10px;
+    max-width: 10px;
 
-  min-width: 10px;
+    min-width: 10px;
 
-  }
-
-
-
-  ::-webkit-scrollbar-track {
-
-  background-color:#002c2c ;			/*Büyük scrool bence buna radius vermiyelim çünkü güzel bir görüntü olmuor boşluk kalıyor */
+}
 
 
 
-  }
+::-webkit-scrollbar-track {
+
+    background-color: #002c2c;
+    /*Büyük scrool bence buna radius vermiyelim çünkü güzel bir görüntü olmuor boşluk kalıyor */
 
 
 
-  ::-webkit-scrollbar-thumb {			/* scrool un içindeki küçük scrool yükseklik ayarıylada oynayabiliriz belki */
-
-  -webkit-border-radius: 10px;
-
-  -o-border-radius: 10px;
-
-  -moz-border-radius: 10px;
-
-  -ms-border-radius: 10px;
-
-  border-radius: 10px;
-
-  background: #ffffff80;
-
-  }
+}
 
 
 
-  #UstMenu{
+::-webkit-scrollbar-thumb {
+    /* scrool un içindeki küçük scrool yükseklik ayarıylada oynayabiliriz belki */
+
+    -webkit-border-radius: 10px;
+
+    -o-border-radius: 10px;
+
+    -moz-border-radius: 10px;
+
+    -ms-border-radius: 10px;
+
+    border-radius: 10px;
+
+    background: #ffffff80;
+
+}
+
+
+
+#UstMenu {
 
     position: fixed;
 
@@ -86,1569 +88,1658 @@
 
     opacity: 1;
 
-  }
+}
 
 
 
-  #UstMenuAcmaButonu{
+#UstMenuAcmaButonu {
 
-  border: solid #ffffff 1px;
+    border: solid #ffffff 1px;
 
-  border-radius: 5px;
+    border-radius: 5px;
 
-  background: #002c2c;
+    background: #002c2c;
 
-  margin: 2px;
+    margin: 2px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  float: left;
+    float: left;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  -webkit-transition: 1s all;
+    -webkit-transition: 1s all;
 
-  -ms-transition: 1s all;
+    -ms-transition: 1s all;
 
-  -o-transition: 1s all;
+    -o-transition: 1s all;
 
-  -moz-transition: 1s all;
+    -moz-transition: 1s all;
 
-  transition: 1s all;
+    transition: 1s all;
 
-  }
+}
 
-  .UstMenuAcmaButonuSilindir{
+.UstMenuAcmaButonuSilindir {
 
-  border: solid #ffffff 1px;
+    border: solid #ffffff 1px;
 
-  background: #ffffff;
+    background: #ffffff;
 
-  border-radius: 15px;
+    border-radius: 15px;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
-  #UstMenuAcmaButonu:hover .UstMenuAcmaButonuSilindir{
+#UstMenuAcmaButonu:hover .UstMenuAcmaButonuSilindir {
 
-  background: #ff4800;
+    background: #ff4800;
 
-  border: solid #ff4800 1px;
+    border: solid #ff4800 1px;
 
-  }
+}
 
-  #UstMenuAcmaButonu:hover{
+#UstMenuAcmaButonu:hover {
 
-  border: solid #ff4800 1px;
+    border: solid #ff4800 1px;
 
-  }
+}
 
 
 
-  #UstMenuAcmaButonuAlani{
+#UstMenuAcmaButonuAlani {
 
-  width:100% ;
+    width: 100%;
 
-  max-width:100% ;
+    max-width: 100%;
 
-  min-width:100% ;
+    min-width: 100%;
 
-  height:auto ;
+    height: auto;
 
-  max-height:auto ;
+    max-height: auto;
 
-  min-height:auto ;
+    min-height: auto;
 
-  background:#002c2c ;
-
-  display: none;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-
-
-  .UstMenuAcmaButonuSecenekleri{
-
-  width:100% ;
-
-  max-width:100% ;
-
-  min-width:100% ;
-
-  height: 25px;
-
-  max-height:25px ;
-
-  min-height:25px ;
-
-  list-style: none;
-
-  border-bottom: #ff5e00 solid 1px;
-
-  text-align: center;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-  .UstMenuAcmaButonuSecenekleri a{
-
-  line-height: 25px;
-
-  text-decoration: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 14px;
-
-  color:#ffffff;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-  #UstMenu-Left{
-
-  position: relative;
-
-  float: left;
-
-  width: 80%;
-
-  max-width:80% ;
-
-  min-width:80% ;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-  #UstMenu-Right{
-
-  position: relative;
-
-  float: right;
-
-  width: 20%;
-
-  max-width:20% ;
-
-  min-width:20% ;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-  .Left-Options{
-
-
-
-  float: left;
-
-  width: 14.282%;
-
-  max-width:14.282% ;
-
-  min-width:14.282% ;
-
-
-
-  }
-
-
-
-  .Right-Options{
-
-
-
-  float: right;
-
-  width: 50%;
-
-  max-width:50% ;
-
-  min-width:50% ;
-
-
-
-  }
-
-  .Left-Options , .Right-Options{
-
-  list-style: none;
-
-  background: #002c2c;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-  .Left-Options a , .Right-Options a ,#Drop > a{
-
-  text-decoration: none;
-
-  color:#ffffff;
-
-  display: block;
-
-  font-family: 'Times New Roman', Times, serif;
-
-  text-align: center;
-
-  user-select	:none;
-
-  -webkit-transition: 350ms;
-
-  -moz-transition: 350ms;
-
-  -o-transition: 350ms;
-
-  -ms-transition: 350ms;
-
-  transition: 350ms;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
-
-  text-decoration: none;
-
-  background: rgb(255, 255, 255);
-
-  color: #002c2c;
-
-  width:100% ;
-
-  max-width:100% ;
-
-  min-width: 100%;
-
-
-
-  }
-
-  #DropDown{
-
-  display: none;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-  #Drop:hover #DropDown{
-
-  display: block;
-
-  }
-
-  .drop{
-
-  list-style: none;
-
-  width: 100%;
-
-  max-width:100% ;
-
-  min-width:100% ;
-
-  height: 60px;
-
-  max-height:60px ;
-
-  min-height:60px ;
-
-  background: #002c2c;
-
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-
-
-  /* ----------MEDİA-1--------------------*/
-
-
-
-  @media only screen and (min-width:1200px)  {
-
-  #UstMenuAcmaButonu{
-
-  display: none;
-
-  }
-
-  nav#UstMenu , #UstMenu-Left , #UstMenu-Right , .Left-Options , .Right-Options , .drop ,#AltMenu {
-
-    height: 60px;
-
-    max-height:60px ;
-
-    min-height:60px ;
-
-  }
-
-  .Left-Options a , .Right-Options a{
-
-    line-height: 60px;
-
-  }
-
-
-
-  #UstMenu-Left , #UstMenu-Right{
-
-    display: block;
-
-  }
-
-
-
-  .Left-Options a , .Right-Options a ,#Drop > a{
-
-    font-size: 15px;
-
-  }
-
-
-
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
-
-    font-size: 16px;
-
-  }
-
-
-
-  #carouselExampleIndicators{
-
-    margin-top: 60px;
-
-  }
-
-
-
-  .AltMenuSolIkon img , .AltMenuSagIkon img{
-
-    margin-left: 8px;
-
-    margin-right:8px ;
-
-    margin-top: 10px;
-
-    width:40px ;
-
-    max-width:40px ;
-
-    min-width:40px ;
-
-    height:40px ;
-
-    max-height:40px ;
-
-    min-height:40px ;
-
-
-
-  }
-
-
-
-  .Yazi h1{
-
-    font-size:50px ;
-
-  }
-
-  .Yazi p{
-
-    font-size: 16px;
-
-  }
-
-
-
-
-
-  #yukarı{
-
-    top: 90%;
-
-    left: 95%;
-
-    width:60px ;
-
-    max-width:60px ;
-
-    min-width:60px ;
-
-    height:60px ;
-
-    max-height:60px ;
-
-    min-height:60px ;
-
-  }
-
-  #yukarı img{
-
-    width:60px ;
-
-    max-width:60px ;
-
-    min-width:60px ;
-
-    height:60px;
-
-    max-height:60px ;
-
-    min-height:60px ;
-
-  }
-
-
-
-  footer , #FooterSol , #FooterOrta , #FooterSag{
-
-    height: 250px;
-
-    max-height:250px ;
-
-    min-height:250px ;
-
-  }
-
-  #FooterSolResim img{
-
-    padding-top: 2%;
-
-    padding-bottom: 2%;
-
-  }
-
-
-
-  .FooterOrtaBilgiler p{
-
-    font-size: 18px;
-
-  }
-
-
-
-  .FooterOrtaBilgilerAlani a{
-
-    font-size: 16px;
-
-  }
-
-
-
-  #FooterSolYazi p {
-
-    font-size: 24px;
-
-  }
-
-
-
-  .mail-footer{
-
-    font-size: 14px;
-
-    line-height: 80px;
-
-    margin-left: 10%;
-
-  }
-
-  .ikon-footer{
-
-    margin-top: 7%;
-
-    margin-left: 14%;
-
-    width: 40px;
-
-    max-width:40px ;
-
-    min-width:40px ;
-
-    height: 40px;
-
-    max-height:40px ;
-
-    min-height:40px ;
-
-
-
-    }
-
-    #Haklarimiz p{
-
-      font-size: 14px;
-
-    }
-
-
-
-  }
-
-
-
-  /* -------------MEDİA-2-----------------*/
-
-
-
-  @media only screen and (min-width:992px) and (max-width:1199px) {
-
-  #UstMenuAcmaButonu{
+    background: #002c2c;
 
     display: none;
 
-    }
+    border: none;
 
-  nav#UstMenu , #UstMenu-Left , #UstMenu-Right , .Left-Options , .Right-Options , .drop ,#AltMenu{
+    outline: none;
 
-       height: 55px;
+    opacity: 1;
 
-       max-height:55px ;
+}
 
-       min-height:55px ;
 
-  }
 
-  .Left-Options a , .Right-Options a{
 
-  line-height: 55px;
 
-  }
+.UstMenuAcmaButonuSecenekleri {
 
+    width: 100%;
 
+    max-width: 100%;
 
-  #UstMenu-Left , #UstMenu-Right{
-
-    display: block;
-
-  }
-
-
-
-  .Left-Options a , .Right-Options a ,#Drop > a{
-
-    font-size: 14px;
-
-  }
-
-
-
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
-
-    font-size: 15px;
-
-  }
-
-
-
-
-
-#carouselExampleIndicators{
-
-    margin-top: 55px;
-
-  }
-
-
-
-  .AltMenuSolIkon img , .AltMenuSagIkon img{
-
-  margin-left: 7px;
-
-  margin-right:7px ;
-
-  margin-top: 10px;
-
-  width:35px ;
-
-  max-width:35px ;
-
-  min-width:35px ;
-
-  height:35px ;
-
-  max-height:35px ;
-
-  min-height:35px ;
-
-  }
-
-
-
-
-
-  .Yazi h1{
-
-    font-size:50px ;
-
-  }
-
-  .Yazi p{
-
-    font-size: 16px;
-
-  }
-
-
-
-  #yukarı{
-
-    top: 90%;
-
-    left: 95%;
-
-    width:50px ;
-
-    max-width:50px ;
-
-    min-width:50px ;
-
-    height:50px ;
-
-    max-height:50px ;
-
-    min-height:50px ;
-
-  }
-
-  #yukarı img{
-
-    width:50px ;
-
-    max-width:50px ;
-
-    min-width:50px ;
-
-    height:50px;
-
-    max-height:50px ;
-
-    min-height:50px ;
-
-  }
-
-
-
-  footer , #FooterSol , #FooterOrta , #FooterSag{
-
-    height: 230px;
-
-    max-height:230px ;
-
-    min-height:230px ;
-
-  }
-
-
-
-  .FooterOrtaBilgiler p{
-
-    font-size: 16px;
-
-  }
-
-
-
-  .FooterOrtaBilgilerAlani a{
-
-    font-size: 13px;
-
-  }
-
-
-
-  #FooterSolYazi p{
-
-    font-size: 20px;
-
-  }
-
-  #FooterSolResim img{
-
-    padding-top: 2%;
-
-    padding-bottom: 2%;
-
-  }
-
-
-
-  .mail-footer{
-
-    font-size: 12px;
-
-    line-height: 70px;
-
-    margin-left: 4%;
-
-  }
-
-  .ikon-footer{
-
-    margin-top: 10%;
-
-    margin-left: 13%;
-
-    width: 35px;
-
-    max-width:35px ;
-
-    min-width:35px ;
-
-    height: 35px;
-
-    max-height:35px ;
-
-    min-height:35px ;
-
-
-
-    }
-
-    #Haklarimiz p{
-
-      font-size: 13px;
-
-    }
-
-
-
-  }
-
-
-
-  /* -----------MEDİA-3-------------------*/
-
-
-
-  @media only screen and (min-width:768px) and (max-width:991px) {
-
-  #UstMenuAcmaButonu{
-
-    display: none;
-
-    }
-
-  nav#UstMenu , #UstMenu-Left , #UstMenu-Right , .Left-Options , .Right-Options , .drop ,#AltMenu{
-
-       height: 50px;
-
-       max-height:50px ;
-
-       min-height:50px ;
-
-  }
-
-  .Left-Options a , .Right-Options a{
-
-  line-height: 50px;
-
-  }
-
-
-
-  #UstMenu-Left , #UstMenu-Right{
-
-    display: block;
-
-  }
-
-
-
-  .Left-Options a , .Right-Options a ,#Drop > a{
-
-    font-size: 13px;
-
-  }
-
-
-
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
-
-    font-size: 14px;
-
-  }
-
-
-
-#carouselExampleIndicators{
-
-    margin-top: 50px;
-
-  }
-
-
-
-  .AltMenuSolIkon img , .AltMenuSagIkon img{
-
-  margin-left: 6px;
-
-  margin-right:6px ;
-
-  margin-top: 11px;
-
-  width:30px ;
-
-  max-width:30px ;
-
-  min-width:30px ;
-
-  height:30px ;
-
-  max-height:30px ;
-
-  min-height:30px ;
-
-  }
-
-
-
-  .Yazi h1{
-
-    font-size:50px ;
-
-  }
-
-  .Yazi p{
-
-    font-size: 16px;
-
-  }
-
-
-
-
-
-  #yukarı{
-
-    top: 90%;
-
-    left: 94%;
-
-    width:45px ;
-
-    max-width:45px ;
-
-    min-width:45px ;
-
-    height:45px ;
-
-    max-height:45px ;
-
-    min-height:45px ;
-
-  }
-
-  #yukarı img{
-
-    width:45px ;
-
-    max-width:45px ;
-
-    min-width:45px ;
-
-    height:45px;
-
-    max-height:45px ;
-
-    min-height:45px ;
-
-  }
-
-
-
-  footer , #FooterSol , #FooterOrta , #FooterSag{
-
-    height: 190px;
-
-    max-height:190px ;
-
-    min-height:190px ;
-
-  }
-
-
-
-  .FooterOrtaBilgiler p{
-
-    font-size: 12px;
-
-  }
-
-
-
-  .FooterOrtaBilgilerAlani a{
-
-    font-size: 10px;
-
-  }
-
-
-
-
-
-  #FooterSolYazi p {
-
-    font-size: 18px;
-
-  }
-
-  #FooterSolResim img{
-
-    padding-top: 5%;
-
-    padding-bottom: 5%;
-
-  }
-
-  .mail-footer{
-
-    font-size: 9px;
-
-    line-height: 60px;
-
-    margin-left: 1%;
-
-  }
-
-  .ikon-footer{
-
-    margin-top: 10%;
-
-    margin-left: 10%;
-
-    width: 30px;
-
-    max-width:30px ;
-
-    min-width:30px ;
-
-    height: 30px;
-
-    max-height:30px ;
-
-    min-height:30px ;
-
-
-
-    }
-
-    #Haklarimiz p{
-
-      font-size: 12px;
-
-    }
-
-
-
-  }
-
-
-
-  /* ------------MEDİA-4------------------*/
-
-
-
-  @media only screen and (min-width:576px) and (max-width:767px) {
-
-  #UstMenuAcmaButonu{
-
-    display: block;
-
-    width:40px ;
-
-    max-width:40px ;
-
-    min-width:40px ;
-
-    height:42px ;
-
-    max-height:42px ;
-
-    min-height:42px ;
-
-    }
-
-    #UstMenuAcmaButonuAlani{
-
-      margin-top: 45px;
-
-    }
-
-
-
-  .UstMenuAcmaButonuSilindir{
-
-  width:30px ;
-
-  max-width:30px ;
-
-  min-width:30px;
-
-  height:4px ;
-
-  max-height:4px ;
-
-  min-height:4px ;
-
-  margin-top: 7px;
-
-  margin-left: 4px;
-
-  }
-
-
-
-  nav#UstMenu , #UstMenu-Left , #UstMenu-Right , .Left-Options , .Right-Options , .drop ,#AltMenu {
-
-       height: 45px;
-
-       max-height:45px ;
-
-       min-height:45px ;
-
-  }
-
-  .Left-Options a , .Right-Options a{
-
-  line-height: 45px;
-
-  }
-
-
-
-  #UstMenu-Left  {
-
-    display: none;
-
-  }
-
-
-
-  .Left-Options a , .Right-Options a ,#Drop > a{
-
-    font-size: 13px;
-
-  }
-
-
-
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
-
-    font-size: 14px;
-
-  }
-
-
-
-
-
-  #carouselExampleIndicators{
-
-    margin-top: 45px;
-
-  }
-
-
-
-  .AltMenuSolIkon img , .AltMenuSagIkon img{
-
-  margin-left: 5px;
-
-  margin-right:5px ;
-
-  margin-top: 10px;
-
-  width:25px ;
-
-  max-width:25px ;
-
-  min-width:25px ;
-
-  height:25px ;
-
-  max-height:25px ;
-
-  min-height:25px ;
-
-  }
-
-  .Yazi h1{
-
-    font-size:40px ;
-
-  }
-
-  .Yazi p{
-
-    font-size: 14px;
-
-  }
-
-
-
-
-
-  #yukarı{
-
-    top: 90%;
-
-    left: 92%;
-
-    width:40px ;
-
-    max-width:40px ;
-
-    min-width:40px ;
-
-    height:40px ;
-
-    max-height:40px ;
-
-    min-height:40px ;
-
-  }
-
-  #yukarı img{
-
-    width:40px ;
-
-    max-width:40px ;
-
-    min-width:40px ;
-
-    height:40px;
-
-    max-height:40px ;
-
-    min-height:40px ;
-
-  }
-
-
-
-  footer , #FooterSol , #FooterOrta , #FooterSag{
-
-    height: 170px;
-
-    max-height:170px ;
-
-    min-height:170px ;
-
-  }
-
-
-
-  .FooterOrtaBilgiler p{
-
-    font-size: 9px;
-
-  }
-
-
-
-  .FooterOrtaBilgilerAlani a{
-
-    font-size: 9px;
-
-  }
-
-
-
-  #FooterSolYazi p {
-
-    font-size: 13px;
-
-  }
-
-  #FooterSolResim img{
-
-    padding-top: 5%;
-
-    padding-bottom: 5%;
-
-  }
-
-
-
-  .mail-footer{
-
-    font-size: 7px;
-
-    line-height: 60px;
-
-  }
-
-  .ikon-footer{
-
-    margin-top: 12%;
-
-    margin-left: 7.5%;
-
-    width: 25px;
-
-    max-width:25px ;
-
-    min-width:25px ;
+    min-width: 100%;
 
     height: 25px;
 
-    max-height:25px ;
+    max-height: 25px;
 
-    min-height:25px ;
+    min-height: 25px;
+
+    list-style: none;
+
+    border-bottom: #ff5e00 solid 1px;
+
+    text-align: center;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+.UstMenuAcmaButonuSecenekleri a {
+
+    line-height: 25px;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #ffffff;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
 
 
 
-    }
+#UstMenu-Left {
 
-    #Haklarimiz p{
+    position: relative;
 
-      font-size: 11px;
+    float: left;
 
-    }
+    width: 80%;
+
+    max-width: 80%;
+
+    min-width: 80%;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+#UstMenu-Right {
+
+    position: relative;
+
+    float: right;
+
+    width: 20%;
+
+    max-width: 20%;
+
+    min-width: 20%;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+.Left-Options {
 
 
 
-  }
+    float: left;
+
+    width: 14.282%;
+
+    max-width: 14.282%;
+
+    min-width: 14.282%;
 
 
 
-  /* ------------MEDİA-5------------------*/
+}
 
 
 
-  @media only screen and  (max-width:575px) {
+.Right-Options {
 
-  #UstMenuAcmaButonu{
+
+
+    float: right;
+
+    width: 50%;
+
+    max-width: 50%;
+
+    min-width: 50%;
+
+
+
+}
+
+.Left-Options,
+.Right-Options {
+
+    list-style: none;
+
+    background: #002c2c;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+
+
+.Left-Options a,
+.Right-Options a,
+#Drop>a {
+
+    text-decoration: none;
+
+    color: #ffffff;
 
     display: block;
 
-    width:32px ;
+    font-family: 'Times New Roman', Times, serif;
 
-    max-width:32px ;
+    text-align: center;
 
-    min-width:32px ;
+    user-select: none;
 
-    height:32px ;
+    -webkit-transition: 350ms;
 
-    max-height:32px ;
+    -moz-transition: 350ms;
 
-    min-height:32px ;
+    -o-transition: 350ms;
 
-    margin-top: 5px;
+    -ms-transition: 350ms;
 
-    }
+    transition: 350ms;
 
-    #UstMenuAcmaButonuAlani{
+    border: none;
 
-      margin-top: 40px;
+    outline: none;
 
-    }
+    opacity: 1;
 
-
-
-  .UstMenuAcmaButonuSilindir{
-
-  width:22px ;
-
-  max-width:22px ;
-
-  min-width:22px ;
-
-  height:3px ;
-
-  max-height:3px ;
-
-  min-height:3px ;
-
-  margin-top: 5px;
-
-  margin-left: 4px;
-
-  }
+}
 
 
 
-  nav#UstMenu , #UstMenu-Left , #UstMenu-Right , .Left-Options , .Right-Options , .drop ,#AltMenu{
+.Left-Options:hover>a,
+.Right-Options:hover>a,
+.drop:hover>a,
+#Drop a:hover {
 
-       height: 40px;
+    text-decoration: none;
 
-       max-height:40px ;
+    background: rgb(255, 255, 255);
 
-       min-height:40px ;
+    color: #002c2c;
 
-  }
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 100%;
 
 
 
-  #UstMenu-Left  {
+}
+
+#DropDown {
 
     display: none;
 
-  }
+    border: none;
 
+    outline: none;
 
+    opacity: 1;
 
-  .Left-Options a , .Right-Options a{
+}
 
-    line-height: 40px;
 
-  }
 
+#Drop:hover #DropDown {
 
+    display: block;
 
-  .Left-Options a , .Right-Options a ,#Drop > a{
+}
 
-    font-size: 12px;
+.drop {
 
-  }
+    list-style: none;
 
+    width: 100%;
 
+    max-width: 100%;
 
-  .Left-Options:hover > a , .Right-Options:hover > a , .drop:hover > a , #Drop a:hover{
+    min-width: 100%;
 
-    font-size: 13px;
+    height: 60px;
 
-  }
+    max-height: 60px;
 
+    min-height: 60px;
 
+    background: #002c2c;
 
+    border: none;
 
+    outline: none;
 
-  #carouselExampleIndicators{
+    opacity: 1;
 
-    margin-top: 40px;
+}
 
-  }
 
 
+/* ----------MEDİA-1--------------------*/
 
-  .AltMenuSolIkon img , .AltMenuSagIkon img{
 
-  margin-left: 4.5px;
 
-  margin-right:4.5px ;
+@media only screen and (min-width:1200px) {
 
-  margin-top: 9px;
+    #UstMenuAcmaButonu {
 
-  width:22px ;
-
-  max-width:22px ;
-
-  min-width:22px ;
-
-  height:22px ;
-
-  max-height:22px ;
-
-  min-height:22px ;
-
-  }
-
-
-
-  .Yazi h1{
-
-    font-size:30px ;
-
-  }
-
-  .Yazi p{
-
-    font-size: 12px;
-
-  }
-
-
-
-
-
-  #yukarı{
-
-    top: 94%;
-
-    left: 90%;
-
-    width:30px ;
-
-    max-width:30px ;
-
-    min-width:30px ;
-
-    height:30px ;
-
-    max-height:30px ;
-
-    min-height:30px ;
-
-  }
-
-  #yukarı img{
-
-    width:30px ;
-
-    max-width:30px ;
-
-    min-width:30px ;
-
-    height:30px;
-
-    max-height:30px ;
-
-    min-height:30px ;
-
-  }
-
-
-
-  footer , #FooterSol , #FooterOrta , #FooterSag{
-
-    height: 150px;
-
-    max-height:150px ;
-
-    min-height:150px ;
-
-  }
-
-
-
-  .FooterOrtaBilgiler p{
-
-    font-size: 8px;
-
-  }
-
-
-
-  .FooterOrtaBilgilerAlani a{
-
-    font-size: 6px;
-
-  }
-
-
-
-  #FooterSolResim img{
-
-    padding-top: 15%;
-
-    padding-bottom: 15%;
-
-  }
-
-
-
-  .mail-footer{
-
-    font-size: 4px;
-
-    line-height: 45px;
-
-  }
-
-  .ikon-footer{
-
-    margin-top: 12%;
-
-    margin-left: 7.5%;
-
-    width: 20px;
-
-    max-width:20% ;
-
-    min-width:20% ;
-
-    height: 20px;
-
-    max-height:20px ;
-
-    min-height:20px ;
-
-
+        display: none;
 
     }
 
-    #Haklarimiz p{
+    nav#UstMenu,
+    #UstMenu-Left,
+    #UstMenu-Right,
+    .Left-Options,
+    .Right-Options,
+    .drop,
+    #AltMenu {
 
-      font-size: 10px;
+        height: 60px;
+
+        max-height: 60px;
+
+        min-height: 60px;
+
+    }
+
+    .Left-Options a,
+    .Right-Options a {
+
+        line-height: 60px;
 
     }
 
 
 
-  }
+    #UstMenu-Left,
+    #UstMenu-Right {
 
-  /* -----------BİTİŞ-------------------*/
+        display: block;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a,
+    #Drop>a {
+
+        font-size: 15px;
+
+    }
+
+
+
+    .Left-Options:hover>a,
+    .Right-Options:hover>a,
+    .drop:hover>a,
+    #Drop a:hover {
+
+        font-size: 16px;
+
+    }
+
+
+
+    #carouselExampleIndicators {
+
+        margin-top: 60px;
+
+    }
+
+
+
+    .AltMenuSolIkon img,
+    .AltMenuSagIkon img {
+
+        margin-left: 8px;
+
+        margin-right: 8px;
+
+        margin-top: 10px;
+
+        width: 40px;
+
+        max-width: 40px;
+
+        min-width: 40px;
+
+        height: 40px;
+
+        max-height: 40px;
+
+        min-height: 40px;
+
+
+
+    }
+
+
+
+    .Yazi h1 {
+
+        font-size: 50px;
+
+    }
+
+    .Yazi p {
+
+        font-size: 16px;
+
+    }
 
 
 
 
 
-  .carousel-item img{
+    #yukarı {
+
+        top: 90%;
+
+        left: 95%;
+
+        width: 60px;
+
+        max-width: 60px;
+
+        min-width: 60px;
+
+        height: 60px;
+
+        max-height: 60px;
+
+        min-height: 60px;
+
+    }
+
+    #yukarı img {
+
+        width: 60px;
+
+        max-width: 60px;
+
+        min-width: 60px;
+
+        height: 60px;
+
+        max-height: 60px;
+
+        min-height: 60px;
+
+    }
+
+
+
+    footer,
+    #FooterSol,
+    #FooterOrta,
+    #FooterSag {
+
+        height: 250px;
+
+        max-height: 250px;
+
+        min-height: 250px;
+
+    }
+
+    #FooterSolResim img {
+
+        padding-top: 2%;
+
+        padding-bottom: 2%;
+
+    }
+
+
+
+    .FooterOrtaBilgiler p {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .FooterOrtaBilgilerAlani a {
+
+        font-size: 16px;
+
+    }
+
+
+
+    #FooterSolYazi p {
+
+        font-size: 24px;
+
+    }
+
+
+
+    .mail-footer {
+
+        font-size: 14px;
+
+        line-height: 80px;
+
+        margin-left: 10%;
+
+    }
+
+    .ikon-footer {
+
+        margin-top: 7%;
+
+        margin-left: 14%;
+
+        width: 40px;
+
+        max-width: 40px;
+
+        min-width: 40px;
+
+        height: 40px;
+
+        max-height: 40px;
+
+        min-height: 40px;
+
+
+
+    }
+
+    #Haklarimiz p {
+
+        font-size: 14px;
+
+    }
+
+
+
+}
+
+
+
+/* -------------MEDİA-2-----------------*/
+
+
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+
+    #UstMenuAcmaButonu {
+
+        display: none;
+
+    }
+
+    nav#UstMenu,
+    #UstMenu-Left,
+    #UstMenu-Right,
+    .Left-Options,
+    .Right-Options,
+    .drop,
+    #AltMenu {
+
+        height: 55px;
+
+        max-height: 55px;
+
+        min-height: 55px;
+
+    }
+
+    .Left-Options a,
+    .Right-Options a {
+
+        line-height: 55px;
+
+    }
+
+
+
+    #UstMenu-Left,
+    #UstMenu-Right {
+
+        display: block;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a,
+    #Drop>a {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .Left-Options:hover>a,
+    .Right-Options:hover>a,
+    .drop:hover>a,
+    #Drop a:hover {
+
+        font-size: 15px;
+
+    }
+
+
+
+
+
+    #carouselExampleIndicators {
+
+        margin-top: 55px;
+
+    }
+
+
+
+    .AltMenuSolIkon img,
+    .AltMenuSagIkon img {
+
+        margin-left: 7px;
+
+        margin-right: 7px;
+
+        margin-top: 10px;
+
+        width: 35px;
+
+        max-width: 35px;
+
+        min-width: 35px;
+
+        height: 35px;
+
+        max-height: 35px;
+
+        min-height: 35px;
+
+    }
+
+
+
+
+
+    .Yazi h1 {
+
+        font-size: 50px;
+
+    }
+
+    .Yazi p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    #yukarı {
+
+        top: 90%;
+
+        left: 95%;
+
+        width: 50px;
+
+        max-width: 50px;
+
+        min-width: 50px;
+
+        height: 50px;
+
+        max-height: 50px;
+
+        min-height: 50px;
+
+    }
+
+    #yukarı img {
+
+        width: 50px;
+
+        max-width: 50px;
+
+        min-width: 50px;
+
+        height: 50px;
+
+        max-height: 50px;
+
+        min-height: 50px;
+
+    }
+
+
+
+    footer,
+    #FooterSol,
+    #FooterOrta,
+    #FooterSag {
+
+        height: 230px;
+
+        max-height: 230px;
+
+        min-height: 230px;
+
+    }
+
+
+
+    .FooterOrtaBilgiler p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .FooterOrtaBilgilerAlani a {
+
+        font-size: 13px;
+
+    }
+
+
+
+    #FooterSolYazi p {
+
+        font-size: 20px;
+
+    }
+
+    #FooterSolResim img {
+
+        padding-top: 2%;
+
+        padding-bottom: 2%;
+
+    }
+
+
+
+    .mail-footer {
+
+        font-size: 12px;
+
+        line-height: 70px;
+
+        margin-left: 4%;
+
+    }
+
+    .ikon-footer {
+
+        margin-top: 10%;
+
+        margin-left: 13%;
+
+        width: 35px;
+
+        max-width: 35px;
+
+        min-width: 35px;
+
+        height: 35px;
+
+        max-height: 35px;
+
+        min-height: 35px;
+
+
+
+    }
+
+    #Haklarimiz p {
+
+        font-size: 13px;
+
+    }
+
+
+
+}
+
+
+
+/* -----------MEDİA-3-------------------*/
+
+
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+    #UstMenuAcmaButonu {
+
+        display: none;
+
+    }
+
+    nav#UstMenu,
+    #UstMenu-Left,
+    #UstMenu-Right,
+    .Left-Options,
+    .Right-Options,
+    .drop,
+    #AltMenu {
+
+        height: 50px;
+
+        max-height: 50px;
+
+        min-height: 50px;
+
+    }
+
+    .Left-Options a,
+    .Right-Options a {
+
+        line-height: 50px;
+
+    }
+
+
+
+    #UstMenu-Left,
+    #UstMenu-Right {
+
+        display: block;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a,
+    #Drop>a {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .Left-Options:hover>a,
+    .Right-Options:hover>a,
+    .drop:hover>a,
+    #Drop a:hover {
+
+        font-size: 14px;
+
+    }
+
+
+
+    #carouselExampleIndicators {
+
+        margin-top: 50px;
+
+    }
+
+
+
+    .AltMenuSolIkon img,
+    .AltMenuSagIkon img {
+
+        margin-left: 6px;
+
+        margin-right: 6px;
+
+        margin-top: 11px;
+
+        width: 30px;
+
+        max-width: 30px;
+
+        min-width: 30px;
+
+        height: 30px;
+
+        max-height: 30px;
+
+        min-height: 30px;
+
+    }
+
+
+
+    .Yazi h1 {
+
+        font-size: 50px;
+
+    }
+
+    .Yazi p {
+
+        font-size: 16px;
+
+    }
+
+
+
+
+
+    #yukarı {
+
+        top: 90%;
+
+        left: 94%;
+
+        width: 45px;
+
+        max-width: 45px;
+
+        min-width: 45px;
+
+        height: 45px;
+
+        max-height: 45px;
+
+        min-height: 45px;
+
+    }
+
+    #yukarı img {
+
+        width: 45px;
+
+        max-width: 45px;
+
+        min-width: 45px;
+
+        height: 45px;
+
+        max-height: 45px;
+
+        min-height: 45px;
+
+    }
+
+
+
+    footer,
+    #FooterSol,
+    #FooterOrta,
+    #FooterSag {
+
+        height: 190px;
+
+        max-height: 190px;
+
+        min-height: 190px;
+
+    }
+
+
+
+    .FooterOrtaBilgiler p {
+
+        font-size: 12px;
+
+    }
+
+
+
+    .FooterOrtaBilgilerAlani a {
+
+        font-size: 10px;
+
+    }
+
+
+
+
+
+    #FooterSolYazi p {
+
+        font-size: 18px;
+
+    }
+
+    #FooterSolResim img {
+
+        padding-top: 5%;
+
+        padding-bottom: 5%;
+
+    }
+
+    .mail-footer {
+
+        font-size: 9px;
+
+        line-height: 60px;
+
+        margin-left: 1%;
+
+    }
+
+    .ikon-footer {
+
+        margin-top: 10%;
+
+        margin-left: 10%;
+
+        width: 30px;
+
+        max-width: 30px;
+
+        min-width: 30px;
+
+        height: 30px;
+
+        max-height: 30px;
+
+        min-height: 30px;
+
+
+
+    }
+
+    #Haklarimiz p {
+
+        font-size: 12px;
+
+    }
+
+
+
+}
+
+
+
+/* ------------MEDİA-4------------------*/
+
+
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+    #UstMenuAcmaButonu {
+
+        display: block;
+
+        width: 40px;
+
+        max-width: 40px;
+
+        min-width: 40px;
+
+        height: 42px;
+
+        max-height: 42px;
+
+        min-height: 42px;
+
+    }
+
+    #UstMenuAcmaButonuAlani {
+
+        margin-top: 45px;
+
+    }
+
+
+
+    .UstMenuAcmaButonuSilindir {
+
+        width: 30px;
+
+        max-width: 30px;
+
+        min-width: 30px;
+
+        height: 4px;
+
+        max-height: 4px;
+
+        min-height: 4px;
+
+        margin-top: 7px;
+
+        margin-left: 4px;
+
+    }
+
+
+
+    nav#UstMenu,
+    #UstMenu-Left,
+    #UstMenu-Right,
+    .Left-Options,
+    .Right-Options,
+    .drop,
+    #AltMenu {
+
+        height: 45px;
+
+        max-height: 45px;
+
+        min-height: 45px;
+
+    }
+
+    .Left-Options a,
+    .Right-Options a {
+
+        line-height: 45px;
+
+    }
+
+
+
+    #UstMenu-Left {
+
+        display: none;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a,
+    #Drop>a {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .Left-Options:hover>a,
+    .Right-Options:hover>a,
+    .drop:hover>a,
+    #Drop a:hover {
+
+        font-size: 14px;
+
+    }
+
+
+
+
+
+    #carouselExampleIndicators {
+
+        margin-top: 45px;
+
+    }
+
+
+
+    .AltMenuSolIkon img,
+    .AltMenuSagIkon img {
+
+        margin-left: 5px;
+
+        margin-right: 5px;
+
+        margin-top: 10px;
+
+        width: 25px;
+
+        max-width: 25px;
+
+        min-width: 25px;
+
+        height: 25px;
+
+        max-height: 25px;
+
+        min-height: 25px;
+
+    }
+
+    .Yazi h1 {
+
+        font-size: 40px;
+
+    }
+
+    .Yazi p {
+
+        font-size: 14px;
+
+    }
+
+
+
+
+
+    #yukarı {
+
+        top: 90%;
+
+        left: 92%;
+
+        width: 40px;
+
+        max-width: 40px;
+
+        min-width: 40px;
+
+        height: 40px;
+
+        max-height: 40px;
+
+        min-height: 40px;
+
+    }
+
+    #yukarı img {
+
+        width: 40px;
+
+        max-width: 40px;
+
+        min-width: 40px;
+
+        height: 40px;
+
+        max-height: 40px;
+
+        min-height: 40px;
+
+    }
+
+
+
+    footer,
+    #FooterSol,
+    #FooterOrta,
+    #FooterSag {
+
+        height: 170px;
+
+        max-height: 170px;
+
+        min-height: 170px;
+
+    }
+
+
+
+    .FooterOrtaBilgiler p {
+
+        font-size: 9px;
+
+    }
+
+
+
+    .FooterOrtaBilgilerAlani a {
+
+        font-size: 9px;
+
+    }
+
+
+
+    #FooterSolYazi p {
+
+        font-size: 13px;
+
+    }
+
+    #FooterSolResim img {
+
+        padding-top: 5%;
+
+        padding-bottom: 5%;
+
+    }
+
+
+
+    .mail-footer {
+
+        font-size: 7px;
+
+        line-height: 60px;
+
+    }
+
+    .ikon-footer {
+
+        margin-top: 12%;
+
+        margin-left: 7.5%;
+
+        width: 25px;
+
+        max-width: 25px;
+
+        min-width: 25px;
+
+        height: 25px;
+
+        max-height: 25px;
+
+        min-height: 25px;
+
+
+
+    }
+
+    #Haklarimiz p {
+
+        font-size: 11px;
+
+    }
+
+
+
+}
+
+
+
+/* ------------MEDİA-5------------------*/
+
+
+
+@media only screen and (max-width:575px) {
+
+    #UstMenuAcmaButonu {
+
+        display: block;
+
+        width: 32px;
+
+        max-width: 32px;
+
+        min-width: 32px;
+
+        height: 32px;
+
+        max-height: 32px;
+
+        min-height: 32px;
+
+        margin-top: 5px;
+
+    }
+
+    #UstMenuAcmaButonuAlani {
+
+        margin-top: 40px;
+
+    }
+
+
+
+    .UstMenuAcmaButonuSilindir {
+
+        width: 22px;
+
+        max-width: 22px;
+
+        min-width: 22px;
+
+        height: 3px;
+
+        max-height: 3px;
+
+        min-height: 3px;
+
+        margin-top: 5px;
+
+        margin-left: 4px;
+
+    }
+
+
+
+    nav#UstMenu,
+    #UstMenu-Left,
+    #UstMenu-Right,
+    .Left-Options,
+    .Right-Options,
+    .drop,
+    #AltMenu {
+
+        height: 40px;
+
+        max-height: 40px;
+
+        min-height: 40px;
+
+    }
+
+
+
+    #UstMenu-Left {
+
+        display: none;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a {
+
+        line-height: 40px;
+
+    }
+
+
+
+    .Left-Options a,
+    .Right-Options a,
+    #Drop>a {
+
+        font-size: 12px;
+
+    }
+
+
+
+    .Left-Options:hover>a,
+    .Right-Options:hover>a,
+    .drop:hover>a,
+    #Drop a:hover {
+
+        font-size: 13px;
+
+    }
+
+
+
+
+
+    #carouselExampleIndicators {
+
+        margin-top: 40px;
+
+    }
+
+
+
+    .AltMenuSolIkon img,
+    .AltMenuSagIkon img {
+
+        margin-left: 4.5px;
+
+        margin-right: 4.5px;
+
+        margin-top: 9px;
+
+        width: 22px;
+
+        max-width: 22px;
+
+        min-width: 22px;
+
+        height: 22px;
+
+        max-height: 22px;
+
+        min-height: 22px;
+
+    }
+
+
+
+    .Yazi h1 {
+
+        font-size: 30px;
+
+    }
+
+    .Yazi p {
+
+        font-size: 12px;
+
+    }
+
+
+
+
+
+    #yukarı {
+
+        top: 94%;
+
+        left: 90%;
+
+        width: 30px;
+
+        max-width: 30px;
+
+        min-width: 30px;
+
+        height: 30px;
+
+        max-height: 30px;
+
+        min-height: 30px;
+
+    }
+
+    #yukarı img {
+
+        width: 30px;
+
+        max-width: 30px;
+
+        min-width: 30px;
+
+        height: 30px;
+
+        max-height: 30px;
+
+        min-height: 30px;
+
+    }
+
+
+
+    footer,
+    #FooterSol,
+    #FooterOrta,
+    #FooterSag {
+
+        height: 150px;
+
+        max-height: 150px;
+
+        min-height: 150px;
+
+    }
+
+
+
+    .FooterOrtaBilgiler p {
+
+        font-size: 8px;
+
+    }
+
+
+
+    .FooterOrtaBilgilerAlani a {
+
+        font-size: 6px;
+
+    }
+
+
+
+    #FooterSolResim img {
+
+        padding-top: 15%;
+
+        padding-bottom: 15%;
+
+    }
+
+
+
+    .mail-footer {
+
+        font-size: 4px;
+
+        line-height: 45px;
+
+    }
+
+    .ikon-footer {
+
+        margin-top: 12%;
+
+        margin-left: 7.5%;
+
+        width: 20px;
+
+        max-width: 20%;
+
+        min-width: 20%;
+
+        height: 20px;
+
+        max-height: 20px;
+
+        min-height: 20px;
+
+
+
+    }
+
+    #Haklarimiz p {
+
+        font-size: 10px;
+
+    }
+
+
+
+}
+
+/* -----------BİTİŞ-------------------*/
+
+
+
+
+
+.carousel-item img {
 
     width: 100%;
 
@@ -1662,187 +1753,188 @@
 
     min-height: 500px;
 
-    }
+}
 
-  #carouselExampleIndicators{
+#carouselExampleIndicators {
 
-  border: none;
+    border: none;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  }
+}
 
-  .carousel-indicators{
+.carousel-indicators {
 
-  padding-top: 460px;
+    padding-top: 460px;
 
-  }
+}
 
 
 
-  #AltMenu{
-
-  width: 100%;
-
-  max-width: 100%;
-
-  min-width: 100%;
-
-  background: #002c2c;
-
-  }
-
-  #AltMenuSol{
-
-  float: left;
-
-  width: 30%;
-
-  max-width: 30%;
-
-  min-width: 30%;
-
-  }
-
-  #AltMenuSag{
-
-  float: right;
-
-  width: 70%;
-
-  max-width: 70%;
-
-  min-width: 70%;
-
-  }
-
-  .AltMenuSolIkon img{
-
-  float: left;
-
-  opacity: 0.4;
-
-  }
-
-  .AltMenuSagIkon img{
-
-  float: right;
-
-  opacity: 0.4;
-
-  -webkit-transition: 205ms all ease ;
-
-  -o-transition: 205ms all ease ;
-
-  -moz-transition: 205ms all ease ;
-
-  -ms-transition: 205ms all ease ;
-
-  transition: 205ms all ease ;
-
-  }
-
-
-
-  .AltMenuSolIkon img:hover , .AltMenuSagIkon img:hover {
-
-  opacity: 1;
-
-  -webkit-transform:scale(1.1)  ;
-
-  -moz-transform:scale(1.1)  ;
-
-  -o-transform:scale(1.1)  ;
-
-  -ms-transform: scale(1.1) ;
-
-  transform: scale(1.1) ;
-
-  }
-
-
-
-  /* Arama butonu Responsive ayarlamadım daha js işlemleride var*/
-
-
-
-  #AramaButonu{
-
-  margin-top: 13px;
-
-  height: 30px;
-
-  max-height:30px ;
-
-  min-height:30px ;
-
-  width:150px;
-
-  max-width:150px ;
-
-  min-width:150px;
-
-  display:block;
-
-  border:none;
-
-  padding:15px 20px;
-
-  border-radius:25px;
-
-  background:whitesmoke;
-
-  transition: 1s ;
-
-  -webkit-transition: 1s;
-
-  -ms-transition:1s;
-
-  -o-transition: 1s;
-
-  -moz-transition: 1s;
-
-  visibility: hidden;
-
-  color: #ff5e00;
-
-  cursor: text;
-
-  }
-
-  .AltMenuSolIkon:hover #AramaButonu{
-
-  width: 350px;
-
-  max-width:350px ;
-
-  min-width:35px ;
-
-  visibility: visible;
-
-  }
-
-
-
-
-
-
-
-
-
-  main{
+#AltMenu {
 
     width: 100%;
 
-    max-width:100% ;
+    max-width: 100%;
 
-    min-width:100% ;
+    min-width: 100%;
+
+    background: #002c2c;
+
+}
+
+#AltMenuSol {
+
+    float: left;
+
+    width: 30%;
+
+    max-width: 30%;
+
+    min-width: 30%;
+
+}
+
+#AltMenuSag {
+
+    float: right;
+
+    width: 70%;
+
+    max-width: 70%;
+
+    min-width: 70%;
+
+}
+
+.AltMenuSolIkon img {
+
+    float: left;
+
+    opacity: 0.4;
+
+}
+
+.AltMenuSagIkon img {
+
+    float: right;
+
+    opacity: 0.4;
+
+    -webkit-transition: 205ms all ease;
+
+    -o-transition: 205ms all ease;
+
+    -moz-transition: 205ms all ease;
+
+    -ms-transition: 205ms all ease;
+
+    transition: 205ms all ease;
+
+}
+
+
+
+.AltMenuSolIkon img:hover,
+.AltMenuSagIkon img:hover {
+
+    opacity: 1;
+
+    -webkit-transform: scale(1.1);
+
+    -moz-transform: scale(1.1);
+
+    -o-transform: scale(1.1);
+
+    -ms-transform: scale(1.1);
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* Arama butonu Responsive ayarlamadım daha js işlemleride var*/
+
+
+
+#AramaButonu {
+
+    margin-top: 13px;
+
+    height: 30px;
+
+    max-height: 30px;
+
+    min-height: 30px;
+
+    width: 150px;
+
+    max-width: 150px;
+
+    min-width: 150px;
+
+    display: block;
+
+    border: none;
+
+    padding: 15px 20px;
+
+    border-radius: 25px;
+
+    background: whitesmoke;
+
+    transition: 1s;
+
+    -webkit-transition: 1s;
+
+    -ms-transition: 1s;
+
+    -o-transition: 1s;
+
+    -moz-transition: 1s;
+
+    visibility: hidden;
+
+    color: #ff5e00;
+
+    cursor: text;
+
+}
+
+.AltMenuSolIkon:hover #AramaButonu {
+
+    width: 350px;
+
+    max-width: 350px;
+
+    min-width: 35px;
+
+    visibility: visible;
+
+}
+
+
+
+
+
+
+
+
+
+main {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 100%;
 
     height: auto;
 
-    max-height:auto ;
+    max-height: auto;
 
-    min-height:auto ;
+    min-height: auto;
 
     position: relative;
 
@@ -1854,11 +1946,11 @@
 
 
 
-  }
+}
 
 
 
-  #MüzikAlani{
+#MüzikAlani {
 
     float: right;
 
@@ -1868,7 +1960,7 @@
 
     top: 80px;
 
-    z-index:91 ;
+    z-index: 91;
 
     border: none;
 
@@ -1876,11 +1968,11 @@
 
     opacity: 1;
 
-  }
+}
 
 
 
-  .Yazi{
+.Yazi {
 
     clear: both;
 
@@ -1888,9 +1980,9 @@
 
     height: auto;
 
-    max-height:auto ;
+    max-height: auto;
 
-    min-height:auto ;
+    min-height: auto;
 
     position: relative;
 
@@ -1904,13 +1996,13 @@
 
 
 
-  }
+}
 
-  .Yazi h1{
+.Yazi h1 {
 
     font-family: 'Times New Roman', Times, serif;
 
-    font-style:italic;
+    font-style: italic;
 
 
 
@@ -1934,9 +2026,9 @@
 
 
 
-  }
+}
 
-  .Yazi p{
+.Yazi p {
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -1967,24 +2059,6 @@
     outline: none;
 
     opacity: 1;
-
-  }
-
-
-
-
-
-  #mekan{
-
-    width: 100%;
-
-    height: auto;
-
-    position: static;
-
-    clear: left;
-
-
 
 }
 
@@ -2018,29 +2092,29 @@
 
     letter-spacing: 2px;
 
-    transition: 1s box-shadow ;
+    transition: 1s box-shadow;
 
     text-decoration: none;
 
-    color:#002c2c ;
+    color: #002c2c;
 
-  }
+}
 
 
 
-  .box a:hover {
+.box a:hover {
 
     box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
 
-    color:#ff5e00 ;
+    color: #ff5e00;
 
-  }
+}
 
 
 
-  .box a:hover::before,
+.box a:hover::before,
 
-  .box a:hover::after {
+.box a:hover::after {
 
     display: block;
 
@@ -2052,35 +2126,35 @@
 
     height: 252px;
 
-    background:#0c4e4e;
+    background: #0c4e4e;
 
     border-radius: 75px;
 
     z-index: -1;
 
-    animation: 1s clockwise infinite;
+    animation: 500ms clockwise infinite;
 
-  }
+}
 
 
 
-  .box a:hover:after {
+.box a:hover:after {
 
-    background:#ff5e00 ;
+    background: #ff5e00;
 
     animation: 2s counterclockwise infinite;
 
-  }
+}
 
 
 
-  @keyframes clockwise {
+@keyframes clockwise {
 
     0% {
 
-      top: -5px;
+        top: -5px;
 
-      left: 0;
+        left: 0;
 
     }
 
@@ -2088,9 +2162,9 @@
 
     12% {
 
-      top: -2px;
+        top: -2px;
 
-      left: 2px;
+        left: 2px;
 
     }
 
@@ -2098,9 +2172,9 @@
 
     25% {
 
-      top: 0;
+        top: 0;
 
-      left: 5px;
+        left: 5px;
 
     }
 
@@ -2108,9 +2182,9 @@
 
     37% {
 
-      top: 2px;
+        top: 2px;
 
-      left: 2px;
+        left: 2px;
 
     }
 
@@ -2118,9 +2192,9 @@
 
     50% {
 
-      top: 5px;
+        top: 5px;
 
-      left: 0;
+        left: 0;
 
     }
 
@@ -2128,9 +2202,9 @@
 
     62% {
 
-      top: 2px;
+        top: 2px;
 
-      left: -2px;
+        left: -2px;
 
     }
 
@@ -2138,9 +2212,9 @@
 
     75% {
 
-      top: 0;
+        top: 0;
 
-      left: -5px;
+        left: -5px;
 
     }
 
@@ -2148,9 +2222,9 @@
 
     87% {
 
-      top: -2px;
+        top: -2px;
 
-      left: -2px;
+        left: -2px;
 
     }
 
@@ -2158,23 +2232,23 @@
 
     100% {
 
-      top: -5px;
+        top: -5px;
 
-      left: 0;
+        left: 0;
 
     }
 
-  }
+}
 
 
 
-  @keyframes counterclockwise {
+@keyframes counterclockwise {
 
     0% {
 
-      top: -5px;
+        top: -5px;
 
-      right: 0;
+        right: 0;
 
     }
 
@@ -2182,9 +2256,9 @@
 
     12% {
 
-      top: -2px;
+        top: -2px;
 
-      right: 2px;
+        right: 2px;
 
     }
 
@@ -2192,9 +2266,9 @@
 
     25% {
 
-      top: 0;
+        top: 0;
 
-      right: 5px;
+        right: 5px;
 
     }
 
@@ -2202,9 +2276,9 @@
 
     37% {
 
-      top: 2px;
+        top: 2px;
 
-      right: 2px;
+        right: 2px;
 
     }
 
@@ -2212,9 +2286,9 @@
 
     50% {
 
-      top: 5px;
+        top: 5px;
 
-      right: 0;
+        right: 0;
 
     }
 
@@ -2222,9 +2296,9 @@
 
     62% {
 
-      top: 2px;
+        top: 2px;
 
-      right: -2px;
+        right: -2px;
 
     }
 
@@ -2232,9 +2306,9 @@
 
     75% {
 
-      top: 0;
+        top: 0;
 
-      right: -5px;
+        right: -5px;
 
     }
 
@@ -2242,9 +2316,9 @@
 
     87% {
 
-      top: -2px;
+        top: -2px;
 
-      right: -2px;
+        right: -2px;
 
     }
 
@@ -2252,13 +2326,13 @@
 
     100% {
 
-      top: -5px;
+        top: -5px;
 
-      right: 0;
+        right: 0;
 
     }
 
-  }
+}
 
 
 
@@ -2268,7 +2342,7 @@
 
 
 
-  #yukarı {
+#yukarı {
 
     position: fixed;
 
@@ -2278,23 +2352,23 @@
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  transition: 1s ;
+    transition: 1s;
 
-  -webkit-transition: 1s;
+    -webkit-transition: 1s;
 
-  -ms-transition:1s;
+    -ms-transition: 1s;
 
-  -o-transition: 1s;
+    -o-transition: 1s;
 
-  -moz-transition: 1s;
+    -moz-transition: 1s;
 
 
 
-  }
+}
 
-  #yukarı:hover{
+#yukarı:hover {
 
     opacity: 1;
 
@@ -2308,13 +2382,13 @@
 
     -ms-transform: translateY(-20px);
 
-  }
+}
 
 
 
 
 
-  footer{
+footer {
 
     clear: both;
 
@@ -2324,19 +2398,19 @@
 
     width: 100%;
 
-    max-width:100% ;
+    max-width: 100%;
 
-    min-width:100% ;
+    min-width: 100%;
 
     background: #002c2c;
 
     position: relative;
 
-    transition: border-color 350ms linear ;
+    transition: border-color 350ms linear;
 
     -webkit-transition: border-color 350ms linear;
 
-    -ms-transition:border-color 350ms linear;
+    -ms-transition: border-color 350ms linear;
 
     -o-transition: border-color 350ms linear;
 
@@ -2348,11 +2422,11 @@
 
     opacity: 1;
 
-  }
+}
 
 
 
-  #FooterSol{
+#FooterSol {
 
     border-right: solid white 3px;
 
@@ -2368,49 +2442,49 @@
 
     opacity: 1;
 
-  }
+}
 
 
 
-  #FooterSolResim{
+#FooterSolResim {
 
     margin-left: 15%;
 
-    width:70% ;
+    width: 70%;
 
     max-width: 70%;
 
     min-width: 70%;
 
-    height:80% ;
+    height: 80%;
 
-    max-height:80% ;
+    max-height: 80%;
 
-    min-height:80% ;
+    min-height: 80%;
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
 
 
-  }
+}
 
-  #FooterSolResim img{
+#FooterSolResim img {
 
     width: 90%;
 
-    max-width:90% ;
+    max-width: 90%;
 
-    min-width:90% ;
+    min-width: 90%;
 
     height: 100%;
 
-    max-height:100% ;
+    max-height: 100%;
 
-    min-height:100% ;
+    min-height: 100%;
 
     margin-left: 5%;
 
@@ -2418,43 +2492,43 @@
 
     border-radius: 50%;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
-
-
+}
 
 
 
 
 
-  #FooterSolYazi{
 
-    width:100% ;
 
-    max-width:100% ;
+#FooterSolYazi {
 
-    min-width:100% ;
+    width: 100%;
 
-    height:20% ;
+    max-width: 100%;
 
-    max-height:20% ;
+    min-width: 100%;
 
-    min-height:20% ;
+    height: 20%;
+
+    max-height: 20%;
+
+    min-height: 20%;
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
 
 
-  #FooterSolYazi p{
+#FooterSolYazi p {
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -2474,41 +2548,41 @@
 
 
 
-  }
+}
 
-  #FooterOrta{
+#FooterOrta {
 
     float: left;
 
     width: 60%;
 
-    max-width:60% ;
+    max-width: 60%;
 
-    min-width:60% ;
+    min-width: 60%;
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
 
 
-  }
+}
 
-  .FooterOrtaBilgiler{
+.FooterOrtaBilgiler {
 
     width: 24%;
 
-    max-width:24% ;
+    max-width: 24%;
 
-    min-width:24% ;
+    min-width: 24%;
 
     height: 90%;
 
-    max-height:90% ;
+    max-height: 90%;
 
-    min-height:90% ;
+    min-height: 90%;
 
     margin-top: 1%;
 
@@ -2522,15 +2596,15 @@
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
 
 
-  .FooterOrtaBilgiler p{
+.FooterOrtaBilgiler p {
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -2538,7 +2612,7 @@
 
     text-align: center;
 
-    border-bottom:dashed 1px white;
+    border-bottom: dashed 1px white;
 
     padding-top: 2%;
 
@@ -2546,45 +2620,45 @@
 
     user-select: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
 
 
-  .FooterOrtaBilgilerAlani{
+.FooterOrtaBilgilerAlani {
 
     display: block;
 
     margin-top: 0;
 
-    margin-left:15% ;
+    margin-left: 15%;
 
     width: 70%;
 
-    max-width:70% ;
+    max-width: 70%;
 
-    min-width:70% ;
+    min-width: 70%;
 
     height: 10%;
 
-    max-height:10px ;
+    max-height: 10px;
 
-    min-height:10px ;
+    min-height: 10px;
 
     margin-top: 6%;
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
-  .FooterOrtaBilgilerAlani a{
+.FooterOrtaBilgilerAlani a {
 
     color: #ffffff;
 
@@ -2592,31 +2666,31 @@
 
     font-weight: 1700px;
 
-    font-style: italic;
+    font-style: italic !important;
 
     text-decoration: none;
 
     -webkit-transition: 150ms all;
 
-  -ms-transition: 150ms all;
+    -ms-transition: 150ms all;
 
-  -o-transition: 150ms all;
+    -o-transition: 150ms all;
 
-  -moz-transition: 150ms all;
+    -moz-transition: 150ms all;
 
-  transition: 150ms all;
+    transition: 150ms all;
 
     user-select: none;
 
     border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
-  .FooterOrtaBilgilerAlani a:hover{
+.FooterOrtaBilgilerAlani a:hover {
 
     text-decoration: none;
 
@@ -2624,9 +2698,9 @@
 
     padding-left: 8px;
 
-  }
+}
 
-  #FooterSag{
+#FooterSag {
 
     border-left: solid white 3px;
 
@@ -2634,127 +2708,131 @@
 
     width: 20%;
 
-    max-width:20% ;
+    max-width: 20%;
 
-    min-width:20% ;
+    min-width: 20%;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
-
-
-
-  .footer-ikon{
-
-  border-bottom: solid 3px white;
-
-  height: 33%;
-
-  max-height:33%;
-
-  min-height:33% ;
-
-  width: 100%;
-
-  max-width:100% ;
-
-  min-width:100% ;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
+}
 
 
 
-  .mail-footer{
+.footer-ikon {
 
-  font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid 3px white;
 
-  color: white;
+    height: 33%;
 
-  text-decoration: none;
+    max-height: 33%;
 
-  border: none;
-
-  outline: none;
-
-  opacity: 1;
-
-  }
-
-  .mail-footer:hover{
-
-  color: #ff4800;
-
-  text-decoration: none;
-
-  }
-
-
-
-  .ikon-footer{
-
-  opacity: 0.4;
-
-  -webkit-transition: 250ms all ease ;
-
-  -o-transition: 250ms all ease ;
-
-  -moz-transition: 250ms all ease ;
-
-  -ms-transition: 250ms all ease ;
-
-  transition: 250ms all ease ;
-
-  border: none;
-
-  outline: none;
-
-  }
-
-  .ikon-footer:hover{
-
-  opacity: 1;
-
-  -webkit-transform:scale(1.2)  ;
-
-  -moz-transform:scale(1.2)  ;
-
-  -o-transform:scale(1.2)  ;
-
-  -ms-transform: scale(1.2) ;
-
-  transform: scale(1.2) ;
-
-  }
-
-
-
-  footer:hover  ,footer:hover #FooterSol ,footer:hover #FooterSag ,footer:hover .footer-ikon{
-
-  border-color: #ff4800;
-
-  }
-
-
-
-  #Haklarimiz{
+    min-height: 33%;
 
     width: 100%;
 
-    max-width:100% ;
+    max-width: 100%;
 
-    min-width:100% ;
+    min-width: 100%;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+
+
+.mail-footer {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+
+    outline: none;
+
+    opacity: 1;
+
+}
+
+.mail-footer:hover {
+
+    color: #ff4800;
+
+    text-decoration: none;
+
+}
+
+
+
+.ikon-footer {
+
+    opacity: 0.4;
+
+    -webkit-transition: 250ms all ease;
+
+    -o-transition: 250ms all ease;
+
+    -moz-transition: 250ms all ease;
+
+    -ms-transition: 250ms all ease;
+
+    transition: 250ms all ease;
+
+    border: none;
+
+    outline: none;
+
+}
+
+.ikon-footer:hover {
+
+    opacity: 1;
+
+    -webkit-transform: scale(1.2);
+
+    -moz-transform: scale(1.2);
+
+    -o-transform: scale(1.2);
+
+    -ms-transform: scale(1.2);
+
+    transform: scale(1.2);
+
+}
+
+
+
+footer:hover,
+footer:hover #FooterSol,
+footer:hover #FooterSag,
+footer:hover .FooterOrtaBilgiler p,
+footer:hover .footer-ikon {
+
+    border-color: #ff4800;
+    color: #ff4800;
+}
+
+
+
+#Haklarimiz {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 100%;
 
     height: 30px;
 
-    max-height:30px ;
+    max-height: 30px;
 
-    min-height:30px ;
+    min-height: 30px;
 
     background: #002c2c;
 
@@ -2768,23 +2846,27 @@
 
 
 
-  }
+}
 
-  #Haklarimiz p{
+#Haklarimiz p {
 
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  color: white;
+    color: white;
 
-  text-align: center;
+    text-align: center;
 
-  user-select: none;
+    user-select: none;
 
-  border: none;
+    border: none;
 
-  outline: none;
+    outline: none;
 
-  opacity: 1;
+    opacity: 1;
 
-  }
+}
 
+a{
+    list-style: none !important;
+    text-decoration: none !important;
+}

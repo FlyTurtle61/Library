@@ -23,7 +23,9 @@
                         @foreach ($writers as $val)
                             <tr>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->id }}</td>
-                                <td style="user-select: none; cursor: pointer;">{{ $val->writer_img }}</td>
+                                <td style="user-select: none; cursor: pointer;"><img
+                                    src="{{ str_replace('public', '/storage', $val->writer_img) }}" width="40"
+                                    height="50" class="img img-responsive"></td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->writer_name }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->phone }}</td>
                                 <td style="user-select: none; cursor: pointer;">{{ $val->birth_year }}</td>
@@ -40,8 +42,6 @@
         </div>
     </div>
 </div>
-</div>
-</div>
 
 <div class="modal" id="addWriterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -52,18 +52,20 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
+
             <div class="modal-body">
-                <form id="addWriterForm" method="post" action="{{ route('assistant.addWriter') }}">
+                <form id="addWriterForm" method="post" enctype="multipart/form-data" action="{{ route('assistant.addWriter') }}">
                     @csrf
-                    <div class="form-group">
+                     <div class="form-group">
                         <label>Yazarın Resmi
                             @error('writer_img')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </label>
-                        <input type="file" class="form-control" name="writer_img" placeholder="Yazarın resmi giriniz"
+                        <input type="file" class="form-control" name="writer_img" placeholder="Yazar resmi yükleyiniz"
                             value="{{ old('writer_img') }}" />
                     </div>
+
                     <div class="form-group">
                         <label>Yazarın Adı
                             @error('writer_name')

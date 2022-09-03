@@ -41,6 +41,8 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 
 ## Sisteme Kullanıcı Girişi Yapması İçin Hesaplar
 
+<img src="/about_project_images/Login.JPG" alt="Login">
+
 <table>
     <tr>
         <th>**</th>
@@ -105,6 +107,8 @@ Type the commands one by one into the terminal and then enter the url in your br
 
 ## Accounts for User Login to the System
 
+<img src="/about_project_images/Login.JPG" alt="Login">
+
 <table>
     <tr>
         <th>**</th>
@@ -136,7 +140,7 @@ Type the commands one by one into the terminal and then enter the url in your br
 </ul>
 
 
-<img src="/public/kitap/images/3.jpg" alt="Deneme">
+
 
 
 <!-- ## Learning Laravel

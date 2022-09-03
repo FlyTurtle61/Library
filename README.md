@@ -7,6 +7,57 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
+## Proje Hakkında
+
+<p>Bu proje kütüphaneler için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Okuyucu)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+## Projeyi Ayağa Kaldırmak İçin Kurulması Gerekenler
+
+- [composer](https://getcomposer.org/).
+- [xampp](https://www.apachefriends.org/).
+
+## Sisteme Kullanıcı Girişi Yapması İçin Hesaplar
+
+<table>
+    <th>
+        <td>**</td>
+        <td>E-mail</td>
+        <td>Şifre</td>
+    </th>
+    <th>
+        <td>Admin</td>
+        <td>Alaska</td>
+        <td>1234</td>
+    </th>
+        <th>
+        <td>Asistan</td>
+        <td>Alaska</td>
+        <td>1234</td>
+    </th>
+        <th>
+        <td>Okuyucu</td>
+        <td>Alaska</td>
+        <td>1234</td>
+    </th>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+<a href="#english">for english press</a>
+
+
+<h1 id="english">English Note</h1>
+
 ## About Project
 
 This is Library control panel project for admin-assistant-super admin.
@@ -20,6 +71,9 @@ This is Library control panel project for admin-assistant-super admin.
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+
+
 
 <!-- ## Learning Laravel
 

@@ -11,15 +11,15 @@
 
 ## Proje Hakkında
 
-<p>Bu proje kütüphaneler için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Okuyucu)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
+<p>Bu proje php frameworkü olan laravel ile yazılmış ve kütüphaneler  için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Okuyucu)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
 
 ## Projeyi Ayağa Kaldırmak İçin Kurulması Ve Yapılması Gerekenler
 
 - [composer](https://getcomposer.org/).
 - [xampp](https://www.apachefriends.org/).
-Veri tabanı: https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing
+- [Veri tabanı](https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing).
 
-Bu dosyayı indirip phpmyadmin içine aktarın
+Veritabanı dosyasını  indirip phpmyadmin içine aktarın
 
 sanal host işlemlerini bilgisayarınız üzerinden kutuphane.test yapın klasör dizini olarak kutuphane/public olarak yazın ve sonrasında 
 
@@ -31,15 +31,13 @@ komutunu yazıp enterlayın laravel projesi kurulduktan sonra bu projeyi indirip
 
 daha sonrasında xampı çalıştırın sonrasında apache ve mysql i başlatın
 
-terminali açıp 
+terminali açıp sırasıyla
 
     npm install
 
-    ve
-
     npm run dev
 
-komutlarını terminale yazın ve sonrasında tarayıcınızda url'ye kutuphane.test yazın.
+komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınızda url'ye kutuphane.test yazın.
 
 ## Sisteme Kullanıcı Girişi Yapması İçin Hesaplar
 
@@ -59,7 +57,7 @@ komutlarını terminale yazın ve sonrasında tarayıcınızda url'ye kutuphane.
         <td>ilysdmr34@gmail.com</td>
         <td>123456789</td>
     </tr>
-        <tr>
+    <tr>
         <td>Okuyucu</td>
         <td>arfglgc34@gmail.com</td>
         <td>12345678</td>
@@ -76,30 +74,73 @@ komutlarını terminale yazın ve sonrasında tarayıcınızda url'ye kutuphane.
 
 
 
-<img src="https://drive.google.com/file/d/1fkjgYZ6xB1jr1f5BSa6hIusDWwRFFUKt/view?usp=sharing">
+<img src="https://drive.google.com/file/d/1fkjgYZ6xB1jr1f5BSa6hIusDWwRFFUKt/view?usp=sharing" alt="Login-page">
 
 
 
 
 
-<h1 id="english">English Note</h1>
+<h2 id="english">About Project</h2>
 
-## About Project
+<p>This project is a system written in laravel, which is the php framework, and prepared for libraries, and consists of 4 different panels: <u>(Admin, Super-Admin, Assistant and Reader)</u>.</p>
 
-This is Library control panel project for admin-assistant-super admin.
+## What To Install And Do To Get The Project Up
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [composer](https://getcomposer.org/).
+- [xampp](https://www.apachefriends.org/).
+- [Veri tabanı](https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Download the database file and import it into phpmyadmin
 
+run the virtual host operations on your computer, write the folder directory as library/public and then
 
+Open terminal and go into xamp/htdocs folder.
 
+    composer create-project laravel/laravel kutuphane
+
+Type the command and enter. After the laravel project is installed, you can download this project and put it in the library directory.
+
+then run xamp, then start apache and mysql
+
+open terminal and
+
+    npm install
+
+    npm run dev
+
+Type the commands one by one into the terminal and then enter the url in your browser.
+
+## Accounts for User Login to the System
+
+<table>
+    <tr>
+        <th>**</th>
+        <th>E-mail</th>
+        <th>Password</th>
+    </tr>
+    <tr>
+        <td>Admin</td>
+        <td>bilgehanbezir@gmail.com</td>
+        <td>Bilgehan.99</td>
+    </tr>
+    <tr>
+        <td>Assistant</td>
+        <td>ilysdmr34@gmail.com</td>
+        <td>123456789</td>
+    </tr>
+    <tr>
+        <td>Reader</td>
+        <td>arfglgc34@gmail.com</td>
+        <td>12345678</td>
+    </tr>
+</table>
+
+## Project Shortcomings And Additions
+<ul>
+     <li>The project is not fully completed yet, there are deficiencies in each panel and new areas to be added</li>
+     <li>Especially the Reader panel will be much improved</li>
+     <li>Super admin panel will be designed and access to every page will be authorized</li>
+</ul>
 
 <!-- ## Learning Laravel
 

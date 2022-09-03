@@ -74,7 +74,7 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 
 
 
-<img src="https://drive.google.com/file/d/1fkjgYZ6xB1jr1f5BSa6hIusDWwRFFUKt/view?usp=sharing" alt="Login-page">
+<img src="https://img.shields.io/packagist/l/laravel/framework" alt="License">
 
 
 

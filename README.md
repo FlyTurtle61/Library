@@ -7,53 +7,79 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
+<p>------------<a href="#english">If you want to read this page in English, please press</a>------------</p>
+
 ## Proje Hakkında
 
 <p>Bu proje kütüphaneler için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Okuyucu)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Projeyi Ayağa Kaldırmak İçin Kurulması Gerekenler
+## Projeyi Ayağa Kaldırmak İçin Kurulması Ve Yapılması Gerekenler
 
 - [composer](https://getcomposer.org/).
 - [xampp](https://www.apachefriends.org/).
+Veri tabanı: https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing
+
+Bu dosyayı indirip phpmyadmin içine aktarın
+
+sanal host işlemlerini bilgisayarınız üzerinden kutuphane.test yapın klasör dizini olarak kutuphane/public olarak yazın ve sonrasında 
+
+Terminali açıp xamp/htdocs klasörü içerisine girip
+
+    composer create-project laravel/laravel kutuphane
+
+komutunu yazıp enterlayın laravel projesi kurulduktan sonra bu projeyi indirip kutuphane dizini içerisine atabilirsiniz.
+
+daha sonrasında xampı çalıştırın sonrasında apache ve mysql i başlatın
+
+terminali açıp 
+
+    npm install
+
+    ve
+
+    npm run dev
+
+komutlarını terminale yazın ve sonrasında tarayıcınızda url'ye kutuphane.test yazın.
 
 ## Sisteme Kullanıcı Girişi Yapması İçin Hesaplar
 
 <table>
-    <th>
-        <td>**</td>
-        <td>E-mail</td>
-        <td>Şifre</td>
-    </th>
-    <th>
+    <tr>
+        <th>**</th>
+        <th>E-mail</th>
+        <th>Şifre</th>
+    </tr>
+    <tr>
         <td>Admin</td>
-        <td>Alaska</td>
-        <td>1234</td>
-    </th>
-        <th>
+        <td>bilgehanbezir@gmail.com</td>
+        <td>Bilgehan.99</td>
+    </tr>
+    <tr>
         <td>Asistan</td>
-        <td>Alaska</td>
-        <td>1234</td>
-    </th>
-        <th>
+        <td>ilysdmr34@gmail.com</td>
+        <td>123456789</td>
+    </tr>
+        <tr>
         <td>Okuyucu</td>
-        <td>Alaska</td>
-        <td>1234</td>
-    </th>
-
+        <td>arfglgc34@gmail.com</td>
+        <td>12345678</td>
+    </tr>
 </table>
 
+## Proje Eksiklikleri Ve Eklenecekler
+
+<ul>
+    <li>Proje daha tam anlamıyla tamamlanmadı her panelde eksiklikler ve eklenicek yeni alanlar var</li>
+    <li>Özellikle Okuyucu paneli çok daha geliştirilecek</li>
+    <li>Super admin panel tasarımı yapılacak ve her sayfaya erişim yetkisi olucak</li>
+</ul>
 
 
 
+<img src="https://drive.google.com/file/d/1fkjgYZ6xB1jr1f5BSa6hIusDWwRFFUKt/view?usp=sharing">
 
 
 
-
-
-
-<a href="#english">for english press</a>
 
 
 <h1 id="english">English Note</h1>

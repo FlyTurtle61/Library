@@ -73,13 +73,6 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 </ul>
 
 
-
-<img src="https://img.shields.io/packagist/l/laravel/framework" alt="License">
-
-
-
-
-
 <h2 id="english">About Project</h2>
 
 <p>This project is a system written in laravel, which is the php framework, and prepared for libraries, and consists of 4 different panels: <u>(Admin, Super-Admin, Assistant and Reader)</u>.</p>
@@ -141,6 +134,10 @@ Type the commands one by one into the terminal and then enter the url in your br
      <li>Especially the Reader panel will be much improved</li>
      <li>Super admin panel will be designed and access to every page will be authorized</li>
 </ul>
+
+
+<img src="/public/kitap/images/3.jpg" alt="Deneme">
+
 
 <!-- ## Learning Laravel
 

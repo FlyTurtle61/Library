@@ -18,6 +18,7 @@
 - [composer](https://getcomposer.org/).
 - [xampp](https://www.apachefriends.org/).
 - [node js](https://nodejs.org/en/).
+- [Breeze](http://breeze.github.io/doc-js/download.html).
 - [Veri tabanı](https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing).
 
 Veritabanı dosyasını  indirip phpmyadmin içine aktarın
@@ -85,6 +86,7 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 - [composer](https://getcomposer.org/).
 - [xampp](https://www.apachefriends.org/).
 - [node js](https://nodejs.org/en/).
+- [Breeze](http://breeze.github.io/doc-js/download.html).
 - [Data Base](https://drive.google.com/file/d/1N0n_RxRLQMFvLPSEtfocCOjBVREmMsdC/view?usp=sharing).
 
 Download the database file and import it into phpmyadmin

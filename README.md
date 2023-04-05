@@ -11,7 +11,13 @@
 
 ## Proje Hakkında
 
-<p>Bu proje php frameworkü olan laravel ile yazılmış ve kütüphaneler  için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Okuyucu)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
+<p>Bu proje php frameworkü olan laravel ile yazılmış ve kütüphaneler  için hazırlanmış bir sistemdir ve <u>(Admin,Super-Admin,Asistan ve Kullanıcı)</u> olmak üzere 4 farklı panelden oluşmakta.</p>
+
+## Admin-Asistan Paneli
+<img src="./about_project_images/admin-asistan panel.gif" alt="admin-asistan">
+
+## Kullanıcı Paneli
+<img src="./about_project_images/kullanıcı panel.gif" alt="user">
 
 ## Projeyi Ayağa Kaldırmak İçin Kurulması Ve Yapılması Gerekenler
 
@@ -41,9 +47,9 @@ terminali açıp sırasıyla
 
 komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınızda url'ye kutuphane.test yazın.
 
-## Sisteme Kullanıcı Girişi Yapması İçin Hesaplar
+## Sisteme Kullanıcı Girişi Yapması İçin Hazır Hesaplar
 
-<img src="/about_project_images/Login.JPG" alt="Login">
+<img src="about_project_images/login-register.gif" alt="Login">
 
 <table>
     <tr>
@@ -62,7 +68,7 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
         <td>123456789</td>
     </tr>
     <tr>
-        <td>Okuyucu</td>
+        <td>Kullanıcı</td>
         <td>arfglgc34@gmail.com</td>
         <td>12345678</td>
     </tr>
@@ -79,8 +85,13 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 
 <h2 id="english">About Project</h2>
 
-<p>This project is a system written in laravel, which is the php framework, and prepared for libraries, and consists of 4 different panels: <u>(Admin, Super-Admin, Assistant and Reader)</u>.</p>
+<p>This project is a system written in laravel, which is the php framework, and prepared for libraries, and consists of 4 different panels: <u>(Admin, Super-Admin, Assistant and User)</u>.</p>
 
+## Admin-Assistant Panel
+<img src="./about_project_images/admin-asistan panel.gif" alt="admin-assistant">
+
+## User Panel
+<img src="./about_project_images/kullanıcı panel.gif" alt="user">
 ## What To Install And Do To Get The Project Up
 
 - [composer](https://getcomposer.org/).
@@ -130,7 +141,7 @@ Type the commands one by one into the terminal and then enter the url in your br
         <td>123456789</td>
     </tr>
     <tr>
-        <td>Reader</td>
+        <td>User</td>
         <td>arfglgc34@gmail.com</td>
         <td>12345678</td>
     </tr>

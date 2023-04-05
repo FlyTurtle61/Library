@@ -92,6 +92,7 @@ komutlarını tek tek terminale yazın enterlayın ve sonrasında tarayıcınız
 
 ## User Panel
 <img src="./about_project_images/kullanıcı panel.gif" alt="user">
+
 ## What To Install And Do To Get The Project Up
 
 - [composer](https://getcomposer.org/).
